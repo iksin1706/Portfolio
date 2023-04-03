@@ -1,0 +1,144 @@
+.nav {
+    background: none;
+    &__container {
+        @include full-viewport;
+        position: fixed;
+        z-index: 20;
+        align-items: center;
+        visibility: hidden;
+        display: flex;
+        opacity: 0;
+        transition: transform 0.5s;
+    }
+    &[data-active="false"] {
+        .nav__button:hover .nav.__button__icon::before {
+            transform: translateY(0.2vh);
+            transition: 0.1s;
+        }
+        .nav__button:hover .nav__button-icon::after {
+            transform: translateY(-0.2vh);
+            transition: 0.1s;
+        }
+    }
+    &[data-active="true"] {
+        .nav{
+        &__container {
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 1s;
+            transition: opacity 0.5s;
+        }
+        &__background {
+            transform: scale(60);
+            transition: transform 0.5s;
+        }
+        &__icons {
+            visibility: visible;
+            opacity: 0.1;
+            transition-delay: 1s;
+            transition: opacity 0.5s;
+        }
+        &__button {
+           
+            &__icon {
+                background-color: #00000000;
+                &::after {
+                    top: 0;
+                    left: 0%;
+                    transform: rotate(225deg);
+                }
+                &::before {
+                    top: 0%;
+                    left: 0;
+                    transform: rotate(135deg);
+                }
+            }
+        }
+    }
+    }
+
+    &__icons {
+        background-image: url(img/Background.png);
+        @include absolute-full-size;
+        z-index: 12;
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-position: 0% -10%;
+        background-size: 100vh;
+        visibility: hidden;
+    }
+
+    &__background {
+        position: fixed;
+        left: 50px;
+        top: 50px;
+        border-radius: 50%;
+        height: 8vh;
+        width: 8vh;
+        z-index: 11;
+        background: rgba(151, 54, 26, 1);
+        background: radial-gradient(rgba(255, 175, 27, 1), rgba(151, 54, 26, 1), rgba(44, 20, 19, 1) 100%);
+        transition: transform 0.5s;
+    }
+    &__button {
+        position: fixed;
+        left: 50px;
+        top: 50px;
+        border-radius: 50%;
+        background-color: #c04f30;
+        z-index: 100;
+        height: 8vh;
+        width: 8vh;
+        @include flex-center;
+        cursor: pointer;
+        &__icon {
+            width: 5vh;
+            height: 0.5vh;
+            background-color: white;
+            position: relative;
+            &::after,&::before {
+                position: absolute;
+                content: "";
+                width: 5vh;
+                height: 100%;
+                background-color: white;
+                display: inline-block;
+                transition: 0.1s;
+            }
+            &::after {
+                top: -1vh;
+            }
+            &::before {
+                top: 1vh;
+            }
+        }
+    }
+    &__list {
+        margin-left: clamp(2rem, 13vw, 32rem);
+        z-index: 15;
+
+        &__item {
+            color: white;
+            font-size: clamp(2rem, 7vw, 7rem);
+            display: block;
+            font-weight: 300;
+            padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+        }
+        &:hover &__item {
+            opacity: 0.3;
+        }
+        &:hover &__item:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+    @for $i from 0 to 4 {
+        &[data-active-index="#{$i}"] &__icons {
+            background-position: 0% (-10% + ($i * 35%));
+            transition: background-position 0.3s ease;
+        }
+    }
+    transition: opacity 0.3s ease;
+}
+
+

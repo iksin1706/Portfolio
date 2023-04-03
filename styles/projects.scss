@@ -1,0 +1,105 @@
+.projects {
+    height: 140vh;
+    width: 100vw;
+    background: radial-gradient(at 0% 0%, rgba(255, 175, 27, 1), rgba(151, 54, 26, 1), rgba(44, 20, 19, 1) 100%);
+    background-position: top;
+    transform: translateZ(-10px) scale(2);
+    position: relative;
+    top: 110vh;
+    &__container {
+        position: absolute;
+        left: 10%;
+        top: 40%;
+        transform: translate(0%, -50%) translateZ(5px);
+        display: flex;
+        transform-origin: left;
+        gap: 10vmin;
+    }
+    &__header {
+        font-size: 60px;
+        position: absolute;
+        bottom: 0;
+        visibility: hidden;
+        left: 100px;
+        text-transform: uppercase;
+        &[class*="animated"] {
+            animation: slideFromRight 1s forwards;
+            animation-delay: 0.5s;
+        }
+    }
+}
+
+.card {
+    height: 56vmin;
+    width: 40vmin;
+    transform: scale(0.9);
+    object-fit: cover;
+    -webkit-backdrop-filter: blur(2px);
+    overflow: hidden;
+    color: white;
+    font-size: 30px;
+    user-select: none;
+    font-weight: bold;
+    position: relative;
+    border-radius: 10px;
+
+    &__container {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 180%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+        transition: 0.5s ease-out;
+        overflow: hidden;
+        backdrop-filter: blur(2px);
+        &:hover {
+            transition: 0.5s ease-out;
+            height: 100%;
+            .card__header {
+                transition: 0.5s ease-out;
+                margin-top: 40%;
+            }
+        }
+    }
+    &__header {
+        font-size: 33px;
+        color: white;
+        margin-top: 125%;
+        font-weight: 400;
+        margin-bottom: 30px;
+        text-align: center;
+        transition: 0.5s ease-out;
+    }
+    &__image {
+        height: 100%;
+        background-position: 0% center;
+        background-size: cover;
+        filter: drop-shadow(2);
+    }
+    &__description {
+        margin: 20px;
+        font-size: 20px;
+        color: white;
+        font-weight: 400;
+        text-align: center;
+    }
+    &__technologies {
+        text-align: center;
+    }
+}
+.wave{
+    width: 100vw;
+    height: 10vh;
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.wave--top {
+    bottom: -9vh;
+}
+.wave--bottom {
+    transform: rotate(180deg);
+    top: -9vh;
+}

@@ -1,0 +1,70 @@
+@media (max-width: 1200px) {
+    .about {
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #main-layer {
+        left: -46%;
+    }
+
+    .about {
+        padding-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .about__container {
+        flex-flow: column;
+        align-items: center;
+        gap: 0px;
+        padding-top: 0px;
+        padding: 50px;
+    }
+    .about__head {
+        margin-bottom: 300px;
+    }
+    .about__head {
+        width: 420px;
+    }
+    .about__description {
+        margin-top: 0px;
+    }
+}
+@media only screen and (max-width: 1650px) {
+    .layer7 {
+        transform: translateY(3vh);
+    }
+}
+@media only screen and (max-width: 600px) {
+    #main-layer {
+        left: -33%;
+    }
+    .contact__container {
+        padding-top: 100px;
+        flex-flow: column;
+    }
+    .projects__header {
+        font-size: 45px;
+        left: 30px;
+    }
+    .about__description {
+        font-size: 18px;
+    }
+    .about__head {
+        transform: scale(0.6) !important;
+        margin-top: 50px;
+    }
+    .about-middle {
+        margin-bottom: 50px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .card{
+        height: 97vmin;
+        width: 70vmin;
+    }
+    
+}
