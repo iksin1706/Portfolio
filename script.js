@@ -291,4 +291,73 @@ targets.forEach((target) => {
 });
 
 
+// Define the scroll position and direction variables
+let lastScrollTop = 0;
+let isScrollingUp = false;
 
+let navBackground = document.querySelector('.nav__background');
+let paralax = document.querySelector('.parallax');
+// Add an event listener to the window object for scroll events
+paralax.addEventListener('scroll', () => {
+  // Determine the current scroll position
+  const currentScrollTop = paralax.scrollTop
+  console.log(window.pageYOffset);
+  // Determine the scrolling direction
+  isScrollingUp = currentScrollTop < lastScrollTop;
+
+  // Update the last scroll position
+  lastScrollTop = currentScrollTop;
+
+  // Add or remove a CSS class based on the scrolling direction
+  if (isScrollingUp) {
+    navButton.classList.remove('hidden');
+    navBackground.classList.remove('hidden');
+  } else {
+    navButton.classList.add('hidden');
+    navBackground.classList.add('hidden');
+
+  }
+});
+
+sections = [
+  document.querySelector(".parallax__container"),
+  document.querySelector(".about"),
+  document.querySelector(".projects"),
+  document.querySelector(".contact"),
+
+];
+
+
+function scrollToElement(section) {
+
+  if (section === "home") paralax.scrollTo({
+    top: Position(sections[0]),
+    behavior: 'smooth',
+  })
+  if (section === "about") paralax.scrollTo({
+    top: Position(sections[1]),
+    behavior: 'smooth',
+  })
+  if (section === "projects") paralax.scrollTo({
+    top: Position(sections[2]),
+    behavior: 'smooth',
+  })
+  if (section === "contact") paralax.scrollTo({
+    top: Position(sections[3]),
+    behavior: 'smooth',
+  })
+  nav.dataset.active = false;
+  activeNav = false;
+
+
+}
+
+function Position(obj) {
+  var currenttop = 0;
+  if (obj.offsetParent) {
+    do {
+      currenttop += obj.offsetTop;
+    } while ((obj = obj.offsetParent));
+    return [currenttop];
+  }
+}

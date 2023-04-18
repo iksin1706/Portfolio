@@ -18,22 +18,25 @@
     <title>Łukasz Jasiński Portfolio</title>
 
     <script src="https://kit.fontawesome.com/6a5cb115d0.js" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 
 </head>
 
 <body>
     <nav class="nav" id="nav">
-        <div class="nav__button" id="nav-button">
+        <a class="nav__button" id="nav-button">
             <div class="nav__button__icon"></div>
-        </div>
+        </a>
         <div class="nav__container" id="nav-container">
             <div class="nav__list">
-                <a class="nav__list__item">Home</a>
-                <a class="nav__list__item">About</a>
-                <a class="nav__list__item">Projects</a>
-                <a class="nav__list__item">Contact</a>
+                <a onclick="scrollToElement('home')" class="nav__list__item">Home</a>
+                <a onclick="scrollToElement('about')"  class="nav__list__item">About</a>
+                <a onclick="scrollToElement('projects')" class="nav__list__item">Projects</a>
+                <a onclick="scrollToElement('contact')" class="nav__list__item">Contact</a>
             </div>
         </div>
         <div class="nav__icons"></div>
@@ -333,16 +336,16 @@
                     d="M1349.1,721.8c-12,12.7-6.7,10.7-8.1,23.2s-1.2,20.3,1,25c5.8,12.3,29.3,22.4,31.4,22.7  c6.8,1,13.3-0.9,26.3-4.7c11.4-3.3,17-5,18.9-7.9c3.9-6,0-28.4-10.6-57.1c-5.3-14.5-3.5-34.2-4.4-39.7c-9.9-12.3-8.5-36.4-8.5-36.4  l-8.6,10.6c0,0,0.8-15.9-2.9-39.8c-0.4-6-16,54.8-16,54.8s-1.1-1-2.1,17.4c-0.6,3.7,0.2,9.4-3,13.6  C1353.5,715.3,1364.5,705.5,1349.1,721.8z" />
 
             </svg>
-            <header class="hero__header"></header>
-            <img id="layer5" class="hero__layer" src="img/layers/layer2.webp" alt="">
-            <img id="layer4" class="hero__layer" src="img/layers/layer3.webp" alt="">
-            <img id="layer3" class="hero__layer" src="img/layers/layer4.webp" alt="">
-            <img id="layer2" class="hero__layer" src="img/layers/layer5.webp" alt="">
-            <img id="layer1" class="hero__layer" src="img/layers/layer6.svg" alt="">
+            <h1 class="hero__header"></h1>
+            <img id="layer5" class="hero__layer" src="img/layers/layer2.webp" alt=" paralax layer 5">
+            <img id="layer4" class="hero__layer" src="img/layers/layer3.webp" alt="paralax layer 4">
+            <img id="layer3" class="hero__layer" src="img/layers/layer4.webp" alt="paralax layer 3">
+            <img id="layer2" class="hero__layer" src="img/layers/layer5.webp" alt="paralx layer 2">
+            <img id="layer1" class="hero__layer" src="img/layers/layer6.svg" alt="paralax layer 1">
             <section class="about trigger">
                 <div class="about__container">
-                    <h1 class="about__header"><span class="text--orange"> </span> <span class="text--white"></span>
-                    </h1>
+                    <h2 class="about__header"><span class="text--orange"> </span> <span class="text--white"></span>
+                    </h2>
                     <p class="about__description corners">As a 21-year-old IT student and developer, I have a strong
                         foundation in computer science and a passion for creating innovative software solutions.
                         Throughout my studies, I have gained experience in a variety of programming languages, including
@@ -371,7 +374,7 @@
                                     <div class="head__eye__middle"></div>
                                 </div>
                             </div>
-                            <img class="head__image" src="img/head2.png" alt="" srcset="">
+                            <img class="head__image" src="img/head2.png" alt="vector art of me" srcset="">
 
                         </div>
                     </div>
@@ -382,7 +385,7 @@
                 <img class="wave wave--top" src="img/wave.svg" alt="" srcset="">
 
             </section>
-            <section class="projects trigger">
+            <section id="projects" class="projects trigger">
                 <div class="projects__container">
                     <div class="card" draggable="false" unselectable="on">
                         <div class="card__image" src="" alt="" srcset=""></div>
@@ -392,14 +395,10 @@
                                 Unity C# Blender
                             </div>
                             <p class="card__description">
-                                Demo gry fabularnej stworzene w silniku unity. <br>
-                                Opowiada historie jezusa w czasie i przed spotkania z Janem Chrziciem <br>
-                                II miejsce w Ogólnopolskim Konkursie GEEK <br>
-                                I miejsce w Konkursie Katechetycznych Aplikacji Multimedlialncyh
+                                3D game
                             </p>
-
-                            <div class="card__links">
-                                <a href="" class="card-link"></a>
+                            <div class="row-flex">
+                                <a class="btn"><i class="fa-brands fa-github"></i> Learn more</a>
                             </div>
                         </div>
                     </div>
@@ -411,13 +410,10 @@
                                 C# WPF .NET SQL
                             </div>
                             <p class="card__description">
-                                Desktopowa aplikacja wyświtlająca różne informacje katolickie <br>
-                                Pozwala czytać biblie,wyszukiwać modlitwy a takze dodawać własne i zapisywac ulubione
-                                Backend to .NetCore RestApi <br>
-                                II miejsce w Konkursie Katechetycznych Aplikacji Multimedlialncyh
+                                Desktopowa aplikacja katolicka
                             </p>
-                            <div class="card__links">
-                                <a href="" class="card-link"></a>
+                            <div class="row-flex">
+                                <a class="btn"><i class="fa-brands fa-github"></i> Learn more</a>
                             </div>
                         </div>
                     </div>
@@ -426,14 +422,13 @@
                         <div class="card__container">
                             <h3 class="card__header">RB11</h3>
                             <div class="card__technologies">
-                                HTML CSS JS GSAP BLENDER
+                                HTML CSS JS GSAP
                             </div>
                             <p class="card__description">
-                                Strona prezentująca produkt automatycznej śrutownicy PMJ RB11
-                                Wyświetlane animacje 3D w tle zostały stworzone w programie Blender
+                                3D animation blender
                             </p>
-                            <div class="card__links">
-                                <a href="" class="card-link"></a>
+                            <div class="row-flex">
+                                <a class="btn"><i class="fa-brands fa-github"></i> Learn more</a>
                             </div>
                         </div>
                     </div>
@@ -446,10 +441,10 @@
                                 HTML CSS JS
                             </div>
                             <p class="card__description">
-                                Prosta strona dla firmy elektromotażowej 
+                                Prosta strona dla firmy elektromotażowej
                             </p>
-                            <div class="card__links">
-                                <a href="" class="card-link"></a>
+                            <div class="row-flex">
+                                <a class="btn"><i class="fa-brands fa-github"></i> Learn more</a>
                             </div>
                         </div>
                     </div>
@@ -461,11 +456,10 @@
                                 HTML CSS PHP SQL Bootstrap
                             </div>
                             <p class="card__description">
-                                Blog stworzony z użyciem PHP.
-                                Pozwala użytkownikom dodawać artykuły a także je komentować
+                                Blog stworzony z użyciem php.
                             </p>
-                            <div class="card__links">
-                                <a href="" class="card-link"></a>
+                            <div class="row-flex">
+                                <a class="btn"><i class="fa-brands fa-github"></i> Learn more</a>
                             </div>
                         </div>
                     </div>
@@ -474,13 +468,18 @@
             <section class="contact trigger">
                 <img class="wave wave--bottom" src="img/wave.svg" alt="" srcset="">
 
-                <h1 class="contact__header"><span class="text--white">Contact</span> <span class="text--orange">me</span>
+                <h1 class="contact__header"><span class="text--white">Contact</span> <span
+                        class="text--orange">me</span>
                 </h1>
                 <ul class="contact__container">
-                    <li class="contact__option"><a href="href"><i class="contact__icon fa-brands fa-linkedin"></i></a></li>
-                    <li class="contact__option"><a href="href"></a><i href="" class="contact__icon fas fa-regular fa-envelope"></i></a></li>
-                    <li class="contact__option"><a href="href"></a><i class="contact__icon fa-brands fa-github"></i></a></li>
-                    <li class="contact__option"><a href="href"></a><i href="" class="contact__icon fas fa-phone"></i></a></li>
+                    <li class="contact__option"><a href="https://www.linkedin.com/in/%C5%82ukasz-jasi%C5%84ski-171a78249/" target="_blank"><i class="contact__icon fa-brands fa-linkedin"></i></a>
+                    </li>
+                    <li class="contact__option"><a href="href"></a><i href=""
+                            class="contact__icon fas fa-regular fa-envelope"></i></a></li>
+                    <li class="contact__option"><a href="https://github.com/iksin1706"></a><i class="contact__icon fa-brands fa-github"></i></a>
+                    </li>
+                    <li class="contact__option"><a href="href"></a><i href=""
+                            class="contact__icon fas fa-phone"></i></a></li>
                 </ul>
 
             </section>

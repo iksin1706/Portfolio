@@ -1,0 +1,23 @@
+.btn {
+    padding: 1rem 5rem 1rem 5rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+   /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+   font-size: 1.5rem;
+    border-radius: 5rem;
+    background-image: linear-gradient(to right,rgba(255, 175, 27, 1) 0%, rgba(151, 54, 26, 1) 50%, rgba(255, 175, 27, 1) 100%);
+   }
+  
+  /* Demo Stuff End -> */
+  
+  /* <- Magic Stuff Start */
+  
+  .btn:hover {
+    background-position: right center; /* change the direction of the change here */
+    cursor: pointer;
+    transform: translateY(-5px);
+  }
+  

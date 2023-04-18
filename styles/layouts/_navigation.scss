@@ -69,11 +69,11 @@
 
     &__background {
         position: fixed;
-        left: 2rem;
-        top: 2rem;
+        left: 3rem;
+        top: 3rem;
         border-radius: 50%;
-        height: 8rem;
-        width: 8rem;
+        height: 7rem;
+        width: 7rem;
         z-index: 11;
         background: rgba(151, 54, 26, 1);
         background: radial-gradient(rgba(255, 175, 27, 1), rgba(151, 54, 26, 1), rgba(44, 20, 19, 1) 100%);
@@ -81,17 +81,18 @@
     }
     &__button {
         position: fixed;
-        left: 2rem;
-        top: 2rem;
+        left: 3rem;
+        top: 3rem;
         border-radius: 50%;
         background-color: #c04f30;
         z-index: 100;
-        height: 8rem;
-        width: 8rem;
+        height: 7rem;
+        width: 7rem;
+        transition: .5s;
         @include flex-center;
         cursor: pointer;
         &__icon {
-            width: 5rem;
+            width: 4rem;
             height: 0.3rem;
             background-color: white;
             position: relative;
@@ -99,7 +100,7 @@
             &::before {
                 position: absolute;
                 content: "";
-                width: 5rem;
+                width: 4rem;
                 height: 100%;
                 background-color: white;
                 display: inline-block;
