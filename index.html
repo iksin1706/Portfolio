@@ -34,7 +34,7 @@
         <div class="nav__container" id="nav-container">
             <div class="nav__list">
                 <a onclick="scrollToElement('home')" class="nav__list__item">Home</a>
-                <a onclick="scrollToElement('about')"  class="nav__list__item">About</a>
+                <a onclick="scrollToElement('about')" class="nav__list__item">About</a>
                 <a onclick="scrollToElement('projects')" class="nav__list__item">Projects</a>
                 <a onclick="scrollToElement('contact')" class="nav__list__item">Contact</a>
             </div>
@@ -336,7 +336,7 @@
                     d="M1349.1,721.8c-12,12.7-6.7,10.7-8.1,23.2s-1.2,20.3,1,25c5.8,12.3,29.3,22.4,31.4,22.7  c6.8,1,13.3-0.9,26.3-4.7c11.4-3.3,17-5,18.9-7.9c3.9-6,0-28.4-10.6-57.1c-5.3-14.5-3.5-34.2-4.4-39.7c-9.9-12.3-8.5-36.4-8.5-36.4  l-8.6,10.6c0,0,0.8-15.9-2.9-39.8c-0.4-6-16,54.8-16,54.8s-1.1-1-2.1,17.4c-0.6,3.7,0.2,9.4-3,13.6  C1353.5,715.3,1364.5,705.5,1349.1,721.8z" />
 
             </svg>
-            <h1 class="hero__header"></h1>
+            <h1 class="hero__header">Portfolio</h1>
             <img id="layer5" class="hero__layer" src="img/layers/layer2.webp" alt=" paralax layer 5">
             <img id="layer4" class="hero__layer" src="img/layers/layer3.webp" alt="paralax layer 4">
             <img id="layer3" class="hero__layer" src="img/layers/layer4.webp" alt="paralax layer 3">
@@ -390,12 +390,27 @@
                     <div class="card" draggable="false" unselectable="on">
                         <div class="card__image" src="" alt="" srcset=""></div>
                         <div class="card__container">
+                            <h3 class="card__header">Portfolio</h3>
+                            <div class="card__technologies">
+                                HTML SCSS JS
+                            </div>
+                            <p class="card__description">
+                                This website
+                            </p>
+                            <div class="row-flex">
+                                <a class="btn"><i class="fa-brands fa-github"></i> Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" draggable="false" unselectable="on">
+                        <div class="card__image" src="" alt="" srcset=""></div>
+                        <div class="card__container">
                             <h3 class="card__header">Mesjasz</h3>
                             <div class="card__technologies">
-                                Unity C# Blender
+                                C# Unity Blender
                             </div>
                             <p class="card__description">
-                                3D game
+                                3D Low-poly game about Jesus
                             </p>
                             <div class="row-flex">
                                 <a class="btn"><i class="fa-brands fa-github"></i> Learn more</a>
@@ -405,27 +420,12 @@
                     <div class="card" draggable="false" unselectable="on">
                         <div class="card__image" src="" alt="" srcset=""></div>
                         <div class="card__container">
-                            <h3 class="card__header">Niezbednik katolika</h3>
+                            <h3 class="card__header">Dating App</h3>
                             <div class="card__technologies">
-                                C# WPF .NET SQL
+                                Angular .NET
                             </div>
                             <p class="card__description">
-                                Desktopowa aplikacja katolicka
-                            </p>
-                            <div class="row-flex">
-                                <a class="btn"><i class="fa-brands fa-github"></i> Learn more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" draggable="false" unselectable="on">
-                        <div class="card__image" src="" alt="" srcset=""></div>
-                        <div class="card__container">
-                            <h3 class="card__header">RB11</h3>
-                            <div class="card__technologies">
-                                HTML CSS JS GSAP
-                            </div>
-                            <p class="card__description">
-                                3D animation blender
+                                Dating site
                             </p>
                             <div class="row-flex">
                                 <a class="btn"><i class="fa-brands fa-github"></i> Learn more</a>
@@ -436,12 +436,12 @@
                     <div class="card" draggable="false" unselectable="on">
                         <div class="card__image" src="" alt="" srcset=""></div>
                         <div class="card__container">
-                            <h3 class="card__header">AC.DC</h3>
+                            <h3 class="card__header">QuickBill</h3>
                             <div class="card__technologies">
-                                HTML CSS JS
+                                Java JavaFx Hibernate SQLite
                             </div>
                             <p class="card__description">
-                                Prosta strona dla firmy elektromotażowej
+                                Desktop app for invoicing
                             </p>
                             <div class="row-flex">
                                 <a class="btn"><i class="fa-brands fa-github"></i> Learn more</a>
@@ -451,12 +451,12 @@
                     <div class="card" draggable="false" unselectable="on">
                         <div class="card__image" src="" alt="" srcset=""></div>
                         <div class="card__container">
-                            <h3 class="card__header">Gamedev Blog</h3>
+                            <h3 class="card__header">Algorithms.io</h3>
                             <div class="card__technologies">
-                                HTML CSS PHP SQL Bootstrap
+                                Angular
                             </div>
                             <p class="card__description">
-                                Blog stworzony z użyciem php.
+                                Work in progress(minimax and sorting ready)
                             </p>
                             <div class="row-flex">
                                 <a class="btn"><i class="fa-brands fa-github"></i> Learn more</a>
@@ -468,18 +468,18 @@
             <section class="contact trigger">
                 <img class="wave wave--bottom" src="img/wave.svg" alt="" srcset="">
 
-                <h1 class="contact__header"><span class="text--white">Contact</span> <span
+                <h2 class="contact__header"><span class="text--white">Contact</span> <span
                         class="text--orange">me</span>
-                </h1>
+                </h2>
                 <ul class="contact__container">
-                    <li class="contact__option"><a href="https://www.linkedin.com/in/%C5%82ukasz-jasi%C5%84ski-171a78249/" target="_blank"><i class="contact__icon fa-brands fa-linkedin"></i></a>
-                    </li>
-                    <li class="contact__option"><a href="href"></a><i href=""
-                            class="contact__icon fas fa-regular fa-envelope"></i></a></li>
-                    <li class="contact__option"><a href="https://github.com/iksin1706"></a><i class="contact__icon fa-brands fa-github"></i></a>
-                    </li>
-                    <li class="contact__option"><a href="href"></a><i href=""
-                            class="contact__icon fas fa-phone"></i></a></li>
+                    <a href="https://www.linkedin.com/in/%C5%82ukasz-jasi%C5%84ski-171a78249/" target="_blank"
+                        class="contact__option"><i class="contact__icon fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/%C5%82ukasz-jasi%C5%84ski-171a78249/" target="_blank"
+                        class="contact__option"><i href="" class="contact__icon fas fa-regular fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/%C5%82ukasz-jasi%C5%84ski-171a78249/" target="_blank"
+                        class="contact__option"><i class="contact__icon fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/%C5%82ukasz-jasi%C5%84ski-171a78249/" target="_blank"
+                        class="contact__option"><i href="" class="contact__icon fas fa-phone"></i></a>
                 </ul>
 
             </section>

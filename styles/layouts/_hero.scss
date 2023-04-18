@@ -54,7 +54,7 @@ $animation-delay: 0;
     &__layer {
         position: absolute;
         width: 110%;
-        height: 100vh;
+        height: 101vh;
         z-index: -1;
         object-fit: cover;
         top: 0;
@@ -68,10 +68,10 @@ $animation-delay: 0;
         height: 20vh;
         width: 100vw;
         left: 0;
-        font-size: 13vmin;
+        font-size: 7rem;
         color: white;
         opacity: 0.3;
-        transform: translateZ(-50px) translateY(-1400px) scale(6);
+        transform: translateZ(-50px) translateY(-140rem) scale(6);
         text-transform: uppercase;
     }
     

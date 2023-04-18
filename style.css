@@ -203,7 +203,7 @@
 .hero__layer {
   position: absolute;
   width: 110%;
-  height: 100vh;
+  height: 101vh;
   z-index: -1;
   object-fit: cover;
   top: 0;
@@ -217,10 +217,10 @@
   height: 20vh;
   width: 100vw;
   left: 0;
-  font-size: 13vmin;
+  font-size: 7rem;
   color: white;
   opacity: 0.3;
-  transform: translateZ(-50px) translateY(-1400px) scale(6);
+  transform: translateZ(-50px) translateY(-140rem) scale(6);
   text-transform: uppercase;
 }
 
@@ -401,13 +401,14 @@
   transform: translate(0%, -50%) translateZ(5px);
   display: flex;
   transform-origin: left;
+  gap: 5rem;
 }
 .projects__header {
-  font-size: 60px;
+  font-size: 5rem;
   position: absolute;
   bottom: 0;
   visibility: hidden;
-  left: 100px;
+  left: 5rem;
   text-transform: uppercase;
 }
 .projects__header[class*=animated] {
@@ -416,9 +417,8 @@
 }
 
 .card {
-  height: 56vmin;
-  width: 40vmin;
-  transform: scale(0.9);
+  height: 44rem;
+  width: 30rem;
   object-fit: cover;
   overflow: hidden;
   color: white;
@@ -447,11 +447,11 @@
   margin-top: 40%;
 }
 .card__header {
-  font-size: 33px;
+  font-size: 2.6rem;
   color: white;
   margin-top: 125%;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
   text-align: center;
   transition: 0.5s ease-out;
 }
@@ -462,14 +462,15 @@
   filter: drop-shadow(2);
 }
 .card__description {
-  margin: 20px;
-  font-size: 20px;
+  margin: 2rem;
+  font-size: 2rem;
   color: white;
   font-weight: 400;
   text-align: center;
 }
 .card__technologies {
   text-align: center;
+  font-size: 2rem;
 }
 
 .wave {
@@ -482,12 +483,12 @@
 }
 
 .wave--top {
-  bottom: -9vh;
+  bottom: -9rem;
 }
 
 .wave--bottom {
   transform: rotate(180deg);
-  top: -9vh;
+  top: -9rem;
 }
 
 .contact {
@@ -505,10 +506,10 @@
   padding: 8rem;
   display: flex;
   flex-flow: row;
-  gap: 10rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 10rem;
 }
 .contact__icon {
   font-size: 8rem;
@@ -524,6 +525,7 @@
   position: relative;
   transform: rotate(45deg);
   padding: 3.5rem;
+  border-radius: 2rem;
   background-color: #303030;
   display: flex;
   align-items: center;
@@ -566,11 +568,7 @@
   }
 
   .about__head {
-    margin-bottom: 300px;
-  }
-
-  .about__head {
-    width: 420px;
+    margin-bottom: 40rem;
   }
 
   .about__description {
@@ -589,31 +587,15 @@
 
   .contact__container {
     padding-top: 100px;
-    flex-flow: column;
-  }
-
-  .projects__header {
-    font-size: 45px;
-    left: 30px;
-  }
-
-  .about__description {
-    font-size: 18px;
   }
 
   .about__head {
     transform: scale(0.6) !important;
-    margin-top: 50px;
+    width: 70rem;
   }
 
   .about-middle {
     margin-bottom: 50px;
-  }
-}
-@media only screen and (max-width: 750px) {
-  .card {
-    height: 97vmin;
-    width: 70vmin;
   }
 }
 *,

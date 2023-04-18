@@ -14,13 +14,14 @@
         transform: translate(0%, -50%) translateZ(5px);
         display: flex;
         transform-origin: left;
+        gap: 5rem;
     }
     &__header {
-        font-size: 60px;
+        font-size: 5rem;
         position: absolute;
         bottom: 0;
         visibility: hidden;
-        left: 100px;
+        left: 5rem;
         text-transform: uppercase;
         &[class*="animated"] {
             animation: slideFromRight 1s forwards;
@@ -30,9 +31,8 @@
 }
 
 .card {
-    height: 56vmin;
-    width: 40vmin;
-    transform: scale(0.9);
+    height: 44rem;
+    width: 30rem;
     object-fit: cover;
     overflow: hidden;
     color: white;
@@ -61,11 +61,11 @@
         }
     }
     &__header {
-        font-size: 33px;
+        font-size: 2.6rem;
         color: white;
         margin-top: 125%;
         font-weight: 400;
-        margin-bottom: 30px;
+        margin-bottom: 3rem;
         text-align: center;
         transition: 0.5s ease-out;
     }
@@ -76,14 +76,15 @@
         filter: drop-shadow(2);
     }
     &__description {
-        margin: 20px;
-        font-size: 20px;
+        margin: 2rem;
+        font-size: 2rem;
         color: white;
         font-weight: 400;
         text-align: center;
     }
     &__technologies {
         text-align: center;
+        font-size: 2rem;
     }
 }
 .wave{
@@ -96,9 +97,9 @@
 }
 
 .wave--top {
-    bottom: -9vh;
+    bottom: -9rem;
 }
 .wave--bottom {
     transform: rotate(180deg);
-    top: -9vh;
+    top: -9rem;
 }

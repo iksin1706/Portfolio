@@ -24,10 +24,7 @@
         padding: 50px;
     }
     .about__head {
-        margin-bottom: 300px;
-    }
-    .about__head {
-        width: 420px;
+        margin-bottom: 40rem;
     }
     .about__description {
         margin-top: 0px;
@@ -44,18 +41,16 @@
     }
     .contact__container {
         padding-top: 100px;
-        flex-flow: column;
+        //flex-flow: column;
     }
     .projects__header {
-        font-size: 45px;
-        left: 30px;
+        //left: 30px;
     }
     .about__description {
-        font-size: 18px;
     }
     .about__head {
         transform: scale(0.6) !important;
-        margin-top: 50px;
+        width: 70rem;
     }
     .about-middle {
         margin-bottom: 50px;
@@ -63,8 +58,8 @@
 }
 @media only screen and (max-width: 750px) {
     .card{
-        height: 97vmin;
-        width: 70vmin;
+        // height: 97vmin;
+        // width: 70vmin;
     }
     
 }

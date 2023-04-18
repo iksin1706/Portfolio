@@ -13,10 +13,10 @@
         padding: 8rem;
         display: flex;
         flex-flow: row;
-        gap: 10rem;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        gap: 10rem;
     }
     &__icon {
         font-size: 8rem;
@@ -34,6 +34,7 @@
         position: relative;
         transform: rotate(45deg);
         padding: 3.5rem;
+        border-radius: 2rem;
         background-color: #303030;
         display: flex;
         align-items: center;

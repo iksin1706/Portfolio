@@ -176,6 +176,7 @@ let headAnimation2 = KUTE.fromTo(
 
 async function typingAnimation(className, texts, speed) {
   const element = document.querySelector(className);
+  element.innerHTML="";
   for (let i = 0; i < texts.length - 1; i++) {
     const text = texts[i];
 
@@ -268,11 +269,6 @@ let tweenLight = KUTE.fromTo(
 )
 tweenLight.start();
 
-
-
-
-
-
 const targets = document.querySelectorAll('.trigger');
 
 const observer = new IntersectionObserver((entries) => {
@@ -282,7 +278,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  rootMargin: '50%',
+  rootMargin: '30%',
   threshold: [0.5]
 });
 
@@ -290,25 +286,18 @@ targets.forEach((target) => {
   observer.observe(target);
 });
 
-
-// Define the scroll position and direction variables
 let lastScrollTop = 0;
 let isScrollingUp = false;
 
 let navBackground = document.querySelector('.nav__background');
 let paralax = document.querySelector('.parallax');
-// Add an event listener to the window object for scroll events
 paralax.addEventListener('scroll', () => {
-  // Determine the current scroll position
   const currentScrollTop = paralax.scrollTop
   console.log(window.pageYOffset);
-  // Determine the scrolling direction
   isScrollingUp = currentScrollTop < lastScrollTop;
 
-  // Update the last scroll position
   lastScrollTop = currentScrollTop;
 
-  // Add or remove a CSS class based on the scrolling direction
   if (isScrollingUp) {
     navButton.classList.remove('hidden');
     navBackground.classList.remove('hidden');
@@ -324,7 +313,6 @@ sections = [
   document.querySelector(".about"),
   document.querySelector(".projects"),
   document.querySelector(".contact"),
-
 ];
 
 
