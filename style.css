@@ -13,11 +13,11 @@
   opacity: 0;
   transition: transform 0.5s;
 }
-.nav[data-active=false] .nav__button:hover .nav.__button__icon::before {
+.nav[data-active=false] .nav__button:hover .nav__button__icon::before {
   transform: translateY(0.2vh);
   transition: 0.1s;
 }
-.nav[data-active=false] .nav__button:hover .nav__button-icon::after {
+.nav[data-active=false] .nav__button:hover .nav__button__icon::after {
   transform: translateY(-0.2vh);
   transition: 0.1s;
 }
@@ -66,11 +66,11 @@
 }
 .nav__background {
   position: fixed;
-  left: 50px;
-  top: 50px;
+  left: 2rem;
+  top: 2rem;
   border-radius: 50%;
-  height: 8vh;
-  width: 8vh;
+  height: 8rem;
+  width: 8rem;
   z-index: 11;
   background: #97361a;
   background: radial-gradient(#ffaf1b, #97361a, #2c1413 100%);
@@ -78,38 +78,38 @@
 }
 .nav__button {
   position: fixed;
-  left: 50px;
-  top: 50px;
+  left: 2rem;
+  top: 2rem;
   border-radius: 50%;
   background-color: #c04f30;
   z-index: 100;
-  height: 8vh;
-  width: 8vh;
+  height: 8rem;
+  width: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
 .nav__button__icon {
-  width: 5vh;
-  height: 0.5vh;
+  width: 5rem;
+  height: 0.3rem;
   background-color: white;
   position: relative;
 }
 .nav__button__icon::after, .nav__button__icon::before {
   position: absolute;
   content: "";
-  width: 5vh;
+  width: 5rem;
   height: 100%;
   background-color: white;
   display: inline-block;
   transition: 0.1s;
 }
 .nav__button__icon::after {
-  top: -1vh;
+  top: -1rem;
 }
 .nav__button__icon::before {
-  top: 1vh;
+  top: 1rem;
 }
 .nav__list {
   margin-left: clamp(2rem, 13vw, 32rem);
@@ -183,12 +183,8 @@
 }
 
 .parallax {
-  width: 100vw;
   height: 100vh;
-  position: relative;
   perspective: 10px;
-  top: 0;
-  left: 0;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -230,7 +226,7 @@
 .about {
   width: 100vw;
   position: relative;
-  padding-top: 100px;
+  padding-top: 10rem;
   z-index: 1;
   min-height: 100vh;
   top: 99.9vh;
@@ -241,36 +237,35 @@
   flex-flow: row-reverse;
   justify-content: center;
   z-index: 300;
-  padding: 100px;
-  padding-bottom: 400px;
-  gap: 100px;
+  padding: 10rem;
+  padding-bottom: 40rem;
+  gap: 10rem;
   transform-origin: bottom;
   margin: auto;
 }
 .about__header {
   color: white;
-  font-size: 56px;
+  font-size: 5.6rem;
   text-transform: uppercase;
   animation: fade-in 1s forwards;
   animation-delay: 2s;
   opacity: 0;
 }
 .about__description {
-  font-size: 24px;
+  font-size: 2rem;
   color: white;
   text-align: center;
-  padding: 50px;
+  padding: 5rem;
   background-image: linear-gradient(#ffffff 0%, #707070 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 100px;
   opacity: 0;
 }
 .about__head {
-  padding-left: 50px;
-  min-width: 525px;
-  min-height: 400px;
+  padding-left: 5rem;
+  min-width: 52.5rem;
+  min-height: 40rem;
   transform-origin: bottom;
 }
 
@@ -389,22 +384,22 @@
 }
 
 .projects {
-  height: 140vh;
+  height: 110vh;
   width: 100vw;
   background: radial-gradient(at 0% 0%, #ffaf1b, #97361a, #2c1413 100%);
   background-position: top;
   transform: translateZ(-10px) scale(2);
   position: relative;
-  top: 110vh;
+  top: 70vh;
+  margin-top: 15rem;
 }
 .projects__container {
   position: absolute;
   left: 10%;
-  top: 40%;
+  top: 50%;
   transform: translate(0%, -50%) translateZ(5px);
   display: flex;
   transform-origin: left;
-  gap: 10vmin;
 }
 .projects__header {
   font-size: 60px;
@@ -424,7 +419,6 @@
   width: 40vmin;
   transform: scale(0.9);
   object-fit: cover;
-  -webkit-backdrop-filter: blur(2px);
   overflow: hidden;
   color: white;
   font-size: 30px;
@@ -479,7 +473,7 @@
 
 .wave {
   width: 100vw;
-  height: 10vh;
+  height: 10rem;
   position: absolute;
   object-fit: cover;
   overflow: hidden;
@@ -498,7 +492,7 @@
 .contact {
   width: 100vw;
   position: relative;
-  padding-top: 100px;
+  padding-top: 10rem;
   z-index: 1;
   top: 50vh;
   width: 100vw;
@@ -507,28 +501,28 @@
 }
 .contact__container {
   min-height: 60vh;
-  padding: 80px;
+  padding: 8rem;
   display: flex;
   flex-flow: row;
-  gap: 150px;
+  gap: 10rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 .contact__icon {
-  font-size: 120px;
+  font-size: 8rem;
   color: white;
   transform: rotate(-45deg);
   text-align: center;
 }
 .contact__header {
   text-align: center;
-  font-size: 60px;
+  font-size: 6rem;
 }
 .contact__option {
   position: relative;
   transform: rotate(45deg);
-  padding: 40px;
+  padding: 3.5rem;
   background-color: #303030;
   display: flex;
   align-items: center;
@@ -621,6 +615,48 @@
     width: 70vmin;
   }
 }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
 .text--orange {
   color: #ae4819;
 }
@@ -719,16 +755,6 @@
     visibility: visible;
     transform: translateX(0);
   }
-}
-html {
-  background-color: black;
-  overflow: hidden;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -34,12 +34,8 @@ $animation-delay: 0;
     top: 300vh;
 }
 .parallax {
-    width: 100vw;
     height: 100vh;
-    position: relative;
     perspective: 10px;
-    top: 0;
-    left: 0;
     overflow-x: hidden;
     overflow-y: scroll;
     &__container {

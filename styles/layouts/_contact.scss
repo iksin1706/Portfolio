@@ -1,7 +1,7 @@
 .contact {
     width: 100vw;
     position: relative;
-    padding-top: 100px;
+    padding-top: 10rem;
     z-index: 1;
     top: 50vh;
     width: 100vw;
@@ -10,30 +10,30 @@
 
     &__container {
         min-height: 60vh;
-        padding: 80px;
+        padding: 8rem;
         display: flex;
         flex-flow: row;
-        gap: 150px;
+        gap: 10rem;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
     }
     &__icon {
-        font-size: 120px;
+        font-size: 8rem;
         color: white;
         transform: rotate(-45deg);
         text-align: center;
     }
     &__header {
         text-align: center;
-        font-size: 60px;
+        font-size: 6rem;
     }
 
 
     &__option {
         position: relative;
         transform: rotate(45deg);
-        padding: 40px;
+        padding: 3.5rem;
         background-color: #303030;
         display: flex;
         align-items: center;

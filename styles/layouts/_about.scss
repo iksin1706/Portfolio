@@ -1,7 +1,7 @@
 .about {
     width: 100vw;
     position: relative;
-    padding-top: 100px;
+    padding-top: 10rem;
     z-index: 1;
     min-height: 100vh;
     top: 99.9vh;
@@ -12,36 +12,35 @@
         flex-flow: row-reverse;
         justify-content: center;
         z-index: 300;
-        padding: 100px;
-        padding-bottom: 400px;
-        gap: 100px;
+        padding: 10rem;
+        padding-bottom: 40rem;
+        gap: 10rem;
         transform-origin: bottom;
         margin: auto;
     }
     &__header {
         color: white;
-        font-size: 56px;
+        font-size: 5.6rem;
         text-transform: uppercase;
         animation: fade-in 1s forwards;
         animation-delay: 2s;
         opacity: 0;
     }
     &__description {
-        font-size: 24px;
+        font-size: 2rem;
         color: white;
         text-align: center;
-        padding: 50px;
+        padding: 5rem;
         background-image: linear-gradient(#ffffff 0%, #707070 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-top: 100px;
         opacity: 0;
     }
     &__head {
-        padding-left: 50px;
-        min-width: 525px;
-        min-height: 400px;
+        padding-left: 5rem;
+        min-width: 52.5rem;
+        min-height: 40rem;
         transform-origin: bottom;
     }
 }

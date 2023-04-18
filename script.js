@@ -44,7 +44,7 @@ const wordWidth = words[0].offsetWidth;
 const distance = wordWidth / (2 * Math.PI * r);
 
 const updateAnimation = () => {
-  a = (a + distance/10) % (2 * Math.PI);
+  a = (a + distance / 10) % (2 * Math.PI);
   for (let i = 0; i < words.length; i++) {
     rotate(i * 2 * Math.PI / words.length - a, words[i]);
   }
@@ -82,19 +82,40 @@ Array.from(cardsContainer.getElementsByClassName("card__image"))
   }
   )
 
-projects.onmousedown = e => {
-  cardsContainer.dataset.mouseDownAt = e.clientX;
+projects.addEventListener("mousedown", startDrag);
+projects.addEventListener("mouseup", stopDrag);
+projects.addEventListener("mousemove", drag);
+
+projects.addEventListener("touchstart", startDrag);
+projects.addEventListener("touchend", stopDrag);
+projects.addEventListener("touchmove", drag);
+
+function startDrag(e) {
+  if (e.type === "mousedown") {
+    cardsContainer.dataset.mouseDownAt = e.clientX;
+  } else if (e.type === "touchstart") {
+    cardsContainer.dataset.mouseDownAt = e.touches[0].clientX;
+  }
 }
-projects.onmouseup = e => {
+
+function stopDrag(e) {
   cardsContainer.dataset.mouseDownAt = "0";
   cardsContainer.dataset.prevPercentage = cardsContainer.dataset.percentage;
 }
 
-projects.onmousemove = e => {
+function drag(e) {
+  let clientX;
+  if (e.type === "mousemove") {
+    clientX = e.clientX;
+  } else if (e.type === "touchmove") {
+    clientX = e.touches[0].clientX;
+  } else {
+    return;
+  }
 
   if (cardsContainer.dataset.mouseDownAt === "0") return;
 
-  const mouseDelta = parseFloat(cardsContainer.dataset.mouseDownAt) - e.clientX;
+  const mouseDelta = parseFloat(cardsContainer.dataset.mouseDownAt) - clientX;
   maxDelta = window.innerWidth / 2;
 
   const percentage = (mouseDelta / maxDelta) * 100;
@@ -139,13 +160,13 @@ let headAnimation = KUTE.fromTo(
   '#head1-1',
   { path: '#head1-1' },
   { path: '#head1-2' },
-  { duration: 500,yoyo:true }
+  { duration: 500, yoyo: true }
 )
 let headAnimation2 = KUTE.fromTo(
   '#head2-1',
   { path: '#head2-1' },
   { path: '#head2-2' },
-  { duration: 500,yoyo:true }
+  { duration: 500, yoyo: true }
 )
 
 
@@ -214,24 +235,24 @@ animations();
 
 for (let i = 1; i <= 3; i++) {
   let tween = KUTE.fromTo(
-      '#fire' + i + '-1',
-      { path: '#fire' + i + '-1' },
-      { path: '#fire' + i + '-3' },
-      { duration: i == 3 ? 1000 : 100, yoyo: true, }
+    '#fire' + i + '-1',
+    { path: '#fire' + i + '-1' },
+    { path: '#fire' + i + '-3' },
+    { duration: i == 3 ? 1000 : 100, yoyo: true, }
   )
 
   let tween2 = KUTE.fromTo(
-      '#fire' + i + '-1',
-      { path: '#fire' + i + '-3' },
-      { path: '#fire' + i + '-2' },
-      { duration: i == 3 ? 1000 : 100, }
+    '#fire' + i + '-1',
+    { path: '#fire' + i + '-3' },
+    { path: '#fire' + i + '-2' },
+    { duration: i == 3 ? 1000 : 100, }
   )
 
   let tween3 = KUTE.fromTo(
-      '#fire' + i + '-1',
-      { path: '#fire' + i + '-2' },
-      { path: '#fire' + i + '-1' },
-      { duration: i == 3 ? 1000 : 100, }
+    '#fire' + i + '-1',
+    { path: '#fire' + i + '-2' },
+    { path: '#fire' + i + '-1' },
+    { duration: i == 3 ? 1000 : 100, }
   )
   tween.chain(tween2);
   tween2.chain(tween3);
@@ -246,6 +267,11 @@ let tweenLight = KUTE.fromTo(
   { duration: 150, yoyo: true, repeat: 9999 }
 )
 tweenLight.start();
+
+
+
+
+
 
 const targets = document.querySelectorAll('.trigger');
 

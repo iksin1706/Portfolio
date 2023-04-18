@@ -1,20 +1,15 @@
-@import "mixins.scss";
-@import "navigation.scss";
-@import "hero.scss";
-@import "about.scss";
-@import "projects.scss";
-@import "contact.scss";
-@import "media-queries.scss";
+@import "abstract/mixins";
+@import "abstract/variables";
 
+@import "layouts/navigation.scss";
+@import "layouts/hero.scss";
+@import "layouts/about.scss";
+@import "layouts/projects.scss";
+@import "layouts/contact.scss"
+;
+@import "_media-queries.scss";
 
-@import "typography.scss";
-@import "animations.scss";
-html {
-    background-color: black;
-    overflow: hidden;
-}
-* {
-    padding: 0;
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-}
+@import "base/base";
+@import "base/typography.scss";
+@import "base/animations.scss";
+
