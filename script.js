@@ -349,3 +349,8 @@ function Position(obj) {
     return [currenttop];
   }
 }
+
+function copyToClipboard(what,text){
+  navigator.clipboard.writeText(text);
+  alert(text+" copied to clipboard");
+}
