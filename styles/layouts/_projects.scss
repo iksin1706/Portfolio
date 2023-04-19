@@ -1,7 +1,7 @@
 .projects {
     height: 110vh;
     width: 100vw;
-    background: radial-gradient(at 0% 0%, rgba(255, 175, 27, 1), rgba(151, 54, 26, 1), rgba(44, 20, 19, 1) 100%);
+    background: radial-gradient(at 0% 0%, $color-secondary, $color-primary, $color-dark 100%);
     background-position: top;
     transform: translateZ(-10px) scale(2);
     position: relative;
@@ -47,7 +47,7 @@
         top: 0;
         width: 100%;
         height: 180%;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, .2) 100%);
         transition: 0.5s ease-out;
         overflow: hidden;
         backdrop-filter: blur(2px);
@@ -81,10 +81,15 @@
         color: white;
         font-weight: 400;
         text-align: center;
+        line-height: 1.4;
+        min-height: 8rem;
     }
     &__technologies {
         text-align: center;
         font-size: 2rem;
+    }
+    &_button{
+        bottom: 0;
     }
 }
 .wave{

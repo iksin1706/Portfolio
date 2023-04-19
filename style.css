@@ -73,7 +73,7 @@
   width: 7rem;
   z-index: 11;
   background: #97361a;
-  background: radial-gradient(#ffaf1b, #97361a, #2c1413 100%);
+  background: radial-gradient(#ffaf1b, #97361a, #060303 100%);
   transition: transform 0.5s;
 }
 .nav__button {
@@ -81,7 +81,7 @@
   left: 3rem;
   top: 3rem;
   border-radius: 50%;
-  background-color: #c04f30;
+  background-color: #97361a;
   z-index: 100;
   height: 7rem;
   width: 7rem;
@@ -285,13 +285,13 @@
 .corners::after {
   right: 0px;
   top: 0px;
-  border-top: #ae4819 solid 10px;
-  border-right: #ae4819 solid 10px;
+  border-top: #97361a solid 10px;
+  border-right: #97361a solid 10px;
 }
 .corners::before {
   bottom: 0px;
-  border-left: #ae4819 solid 10px;
-  border-bottom: #ae4819 solid 10px;
+  border-left: #97361a solid 10px;
+  border-bottom: #97361a solid 10px;
 }
 
 .animated .corners::before {
@@ -322,7 +322,7 @@
   position: absolute;
   height: 450px;
   border-radius: 50%;
-  background: radial-gradient(at 0% 0%, #ffaf1b, #97361a, #2c1413 100%);
+  background: radial-gradient(at 0% 0%, #ffaf1b, #97361a, #060303 100%);
   top: 150px;
   left: 0px;
   z-index: -1;
@@ -381,13 +381,13 @@
   display: inline-block;
   width: 120px;
   font-weight: 600;
-  color: #d55114;
+  color: #c7c7c7;
 }
 
 .projects {
   height: 110vh;
   width: 100vw;
-  background: radial-gradient(at 0% 0%, #ffaf1b, #97361a, #2c1413 100%);
+  background: radial-gradient(at 0% 0%, #ffaf1b, #97361a, #060303 100%);
   background-position: top;
   transform: translateZ(-10px) scale(2);
   position: relative;
@@ -433,7 +433,7 @@
   top: 0;
   width: 100%;
   height: 180%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.2) 100%);
   transition: 0.5s ease-out;
   overflow: hidden;
   backdrop-filter: blur(2px);
@@ -467,10 +467,15 @@
   color: white;
   font-weight: 400;
   text-align: center;
+  line-height: 1.4;
+  min-height: 8rem;
 }
 .card__technologies {
   text-align: center;
   font-size: 2rem;
+}
+.card_button {
+  bottom: 0;
 }
 
 .wave {
@@ -627,6 +632,7 @@ html {
 
 body {
   box-sizing: border-box;
+  background-color: #97361a;
 }
 @media (max-width: 56.25em) {
   body {

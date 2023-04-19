@@ -116,10 +116,11 @@ function drag(e) {
   if (cardsContainer.dataset.mouseDownAt === "0") return;
 
   const mouseDelta = parseFloat(cardsContainer.dataset.mouseDownAt) - clientX;
-  maxDelta = window.innerWidth / 2;
+  maxDelta = cardsContainer.offsetWidth / 3;
+  console.log(maxDelta);
 
   const percentage = (mouseDelta / maxDelta) * 100;
-  const nextPercentage = Math.min(Math.max(parseFloat(cardsContainer.dataset.prevPercentage) + percentage, 0), 50);
+  const nextPercentage = Math.min(Math.max(parseFloat(cardsContainer.dataset.prevPercentage) + percentage, 0), 80 );
 
   cardsContainer.dataset.percentage = nextPercentage;
 

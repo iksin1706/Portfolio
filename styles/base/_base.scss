@@ -22,7 +22,7 @@ html {
 
 body {
   box-sizing: border-box;
-
+  background-color: $color-primary;
   @include respond(tab-port) {
     padding: 0;
   }

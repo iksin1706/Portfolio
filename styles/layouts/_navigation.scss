@@ -75,8 +75,8 @@
         height: 7rem;
         width: 7rem;
         z-index: 11;
-        background: rgba(151, 54, 26, 1);
-        background: radial-gradient(rgba(255, 175, 27, 1), rgba(151, 54, 26, 1), rgba(44, 20, 19, 1) 100%);
+        background: $color-primary;
+        background: radial-gradient($color-secondary, $color-primary, $color-dark 100%);
         transition: transform 0.5s;
     }
     &__button {
@@ -84,7 +84,7 @@
         left: 3rem;
         top: 3rem;
         border-radius: 50%;
-        background-color: #c04f30;
+        background-color: $color-primary;
         z-index: 100;
         height: 7rem;
         width: 7rem;

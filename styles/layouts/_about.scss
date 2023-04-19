@@ -60,13 +60,13 @@
     &::after {
         right: 0px;
         top: 0px;
-        border-top: #ae4819 solid 10px;
-        border-right: #ae4819 solid 10px;
+        border-top: $color-primary solid 10px;
+        border-right: $color-primary solid 10px;
     }
     &::before {
         bottom: 0px;
-        border-left: #ae4819 solid 10px;
-        border-bottom: #ae4819 solid 10px;
+        border-left: $color-primary solid 10px;
+        border-bottom: $color-primary solid 10px;
     }
 }
 .animated {
@@ -100,7 +100,7 @@
         position: absolute;
         height: 450px;
         border-radius: 50%;
-        background: radial-gradient(at 0% 0%, #ffaf1b, rgba(151, 54, 26, 1), rgba(44, 20, 19, 1) 100%);
+        background: radial-gradient(at 0% 0%, $color-secondary, $color-primary, $color-dark 100%);
         top: 150px;
         left: 0px;
         z-index: -1;
@@ -125,7 +125,7 @@
     &__eye {
         position: relative;
         border-radius: 50%;
-        background-color: #c7c7c7;
+        background-color: $color-grey;
         position: relative;
         width: 35px;
         height: 35px;
@@ -160,6 +160,6 @@
         display: inline-block;
         width: 120px;
         font-weight: 600;
-        color: #d55114;
+        color: $color-grey;
     }
 }
