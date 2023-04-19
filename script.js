@@ -279,8 +279,8 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  rootMargin: '30%',
-  threshold: [0.5]
+  rootMargin: '20%',
+  threshold: [0.2]
 });
 
 targets.forEach((target) => {
