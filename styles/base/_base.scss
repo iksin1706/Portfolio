@@ -30,6 +30,10 @@ body {
 }
 .hidden{
   transform: scale(0);
+  opacity: 0;
+}
+.display-none{
+  display: none;
 }
 
 .row-flex{

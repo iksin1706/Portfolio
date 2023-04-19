@@ -13,7 +13,7 @@ Array.from(document.getElementsByClassName("nav__list__item"))
       nav.dataset.activeIndex = index;
     }
   }
-  )
+ )
 
 navButton.onclick = () => {
   if (!activeNav) {
@@ -34,9 +34,9 @@ const rotate = (a, obj) => {
   const px = x + r * 3.5 * Math.cos(a);
   const py = y + r * Math.sin(a);
 
-  obj.style.left = px - obj.offsetWidth / 2 + 'px';
-  obj.style.top = py - obj.offsetHeight / 2 + 'px';
-  obj.style.transform = `scale(${(y + 150) / (py + 150)})`;
+
+  obj.style.transform = `translate(${Math.floor(px - obj.offsetWidth / 2)}px,${Math.floor(py - obj.offsetHeight / 2)}px) scale(${(y + 150) / (py + 150)})`;
+  console.log(`translate(${Math.floor(px - obj.offsetWidth / 2)}px,${Math.floor(py - obj.offsetHeight / 2)}px) scale(${(y + 150) / (py + 150)})`);
   obj.style.zIndex = py > y ? 100 : 200;
 };
 
@@ -52,23 +52,6 @@ const updateAnimation = () => {
 };
 
 updateAnimation();
-
-
-document.addEventListener('mousemove', eyeball);
-
-function eyeball(event) {
-  const eyes = document.querySelectorAll('.head__eye');
-  eyes.forEach(eye => {
-    const { left, top, width, height } = eye.getBoundingClientRect();
-    const x = left + width / 2;
-    const y = top + height / 2;
-
-    const radian = Math.atan2(event.pageX - x, event.pageY - y);
-    const rotate = radian * (180 / Math.PI) * -1 + 270;
-    eye.style.transform = `rotate(${rotate}deg)`;
-  });
-}
-
 
 
 let cardsContainer = document.querySelector(".projects__container");
@@ -120,7 +103,7 @@ function drag(e) {
   console.log(maxDelta);
 
   const percentage = (mouseDelta / maxDelta) * 100;
-  const nextPercentage = Math.min(Math.max(parseFloat(cardsContainer.dataset.prevPercentage) + percentage, 0), 80 );
+  const nextPercentage = Math.min(Math.max(parseFloat(cardsContainer.dataset.prevPercentage) + percentage, 0), 80);
 
   cardsContainer.dataset.percentage = nextPercentage;
 
@@ -172,12 +155,12 @@ let headAnimation2 = KUTE.fromTo(
 
 
 
-
+document.querySelector('.hero__header').innerHTML = "";
 
 
 async function typingAnimation(className, texts, speed) {
   const element = document.querySelector(className);
-  element.innerHTML="";
+
   for (let i = 0; i < texts.length - 1; i++) {
     const text = texts[i];
 
@@ -230,45 +213,53 @@ async function animations() {
   typingAnimation(".hero__header", ["Hi I'm Łukasz Jasiński", "And this is my", "Portfolio"], typingSpeed);
 }
 
-animations();
+window.addEventListener("load",async ()=>{
+  const preloader = document.getElementById("preloader");
+  animations();
+  preloader.classList.add("preloader-hidden");
+  await new Promise(resolve => setTimeout(resolve, 1000)).then(()=>{preloader.style.display='none'});
+  
+});
 
 
-//FIRECAMP ANIMATION
+if (window.innerWidth > 800) {
+  //FIRECAMP ANIMATION
 
-for (let i = 1; i <= 3; i++) {
-  let tween = KUTE.fromTo(
-    '#fire' + i + '-1',
-    { path: '#fire' + i + '-1' },
-    { path: '#fire' + i + '-3' },
-    { duration: i == 3 ? 1000 : 100, yoyo: true, }
+  for (let i = 1; i <= 3; i++) {
+    let tween = KUTE.fromTo(
+      '#fire' + i + '-1',
+      { path: '#fire' + i + '-1' },
+      { path: '#fire' + i + '-3' },
+      { duration: i == 3 ? 1000 : 100, yoyo: true, }
+    )
+
+    let tween2 = KUTE.fromTo(
+      '#fire' + i + '-1',
+      { path: '#fire' + i + '-3' },
+      { path: '#fire' + i + '-2' },
+      { duration: i == 3 ? 1000 : 100, }
+    )
+
+    let tween3 = KUTE.fromTo(
+      '#fire' + i + '-1',
+      { path: '#fire' + i + '-2' },
+      { path: '#fire' + i + '-1' },
+      { duration: i == 3 ? 1000 : 100, }
+    )
+    tween.chain(tween2);
+    tween2.chain(tween3);
+    tween3.chain(tween);
+
+    tween.start();
+  }
+  let tweenLight = KUTE.fromTo(
+    '#fire4-1',
+    { opacity: 0.75 },
+    { opacity: 1 },
+    { duration: 150, yoyo: true, repeat: 9999 }
   )
-
-  let tween2 = KUTE.fromTo(
-    '#fire' + i + '-1',
-    { path: '#fire' + i + '-3' },
-    { path: '#fire' + i + '-2' },
-    { duration: i == 3 ? 1000 : 100, }
-  )
-
-  let tween3 = KUTE.fromTo(
-    '#fire' + i + '-1',
-    { path: '#fire' + i + '-2' },
-    { path: '#fire' + i + '-1' },
-    { duration: i == 3 ? 1000 : 100, }
-  )
-  tween.chain(tween2);
-  tween2.chain(tween3);
-  tween3.chain(tween);
-
-  tween.start();
+  tweenLight.start();
 }
-let tweenLight = KUTE.fromTo(
-  '#fire4-1',
-  { opacity: 0.75 },
-  { opacity: 1 },
-  { duration: 150, yoyo: true, repeat: 9999 }
-)
-tweenLight.start();
 
 const targets = document.querySelectorAll('.trigger');
 
@@ -351,7 +342,7 @@ function Position(obj) {
   }
 }
 
-function copyToClipboard(what,text){
+function copyToClipboard(what, text) {
   navigator.clipboard.writeText(text);
-  alert(text+" copied to clipboard");
+  alert(text + " copied to clipboard");
 }

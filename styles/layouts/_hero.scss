@@ -69,10 +69,14 @@ $animation-delay: 0;
         width: 100vw;
         left: 0;
         font-size: 7rem;
+        line-height: 1.4;
         color: white;
         opacity: 0.3;
         transform: translateZ(-50px) translateY(-140rem) scale(6);
         text-transform: uppercase;
+        @include respond(phone) {
+            font-size: 5rem;
+          }
     }
     
 }
