@@ -3,7 +3,7 @@ const navContainer = document.getElementById('nav-container');
 const navButton = document.getElementById('nav-button');
 const words = Array.from(document.getElementsByClassName("head__word"));
 
-var activeNav = false;
+let activeNav = false;
 
 
 Array.from(document.getElementsByClassName("nav__list__item"))
@@ -192,7 +192,6 @@ async function typingAnimation(className, texts, speed) {
 
   }
 
-  console.log('teeest')
   document.querySelector('.hero__header').classList.add('hero__header--big');
   const finalText = texts[texts.length - 1];
   leftHandAnimation.start();
@@ -224,6 +223,7 @@ async function animations() {
 
 window.addEventListener("load",async ()=>{
   const preloader = document.getElementById("preloader");
+  document.getElementById("loader").style.visibility='hidden';
   animations();
   preloader.classList.add("preloader-hidden");
   await new Promise(resolve => setTimeout(resolve, 1000)).then(()=>{preloader.style.display='none'});

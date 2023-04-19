@@ -456,10 +456,14 @@
   transition: 0.5s ease-out;
   background-size: 300%;
   height: 100%;
+  cursor: grab;
 }
 .card__container:hover .card__header {
   transition: 0.5s ease-out;
   margin-top: 40%;
+}
+.card__container:active {
+  cursor: grabbing;
 }
 .card__header {
   font-size: 2.6rem;
@@ -762,24 +766,37 @@ a {
   height: 100%;
   top: 0;
   left: 0;
-  background: radial-gradient(circle at 50% 0%, #ffaf1b, #97361a, #060303 100%);
+  background: radial-gradient(circle at 50% 30%, #ffaf1b, #97361a, #060303 100%);
   z-index: 9999;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
-#loader {
+#loader-heading {
   opacity: 1;
   transition: 1s opacity;
   color: white;
   font-size: 5rem;
+  width: 100%;
+  text-align: center;
+}
+
+#loader {
+  border: 16px solid #97361a;
+  border-top: 16px solid #ffaf1b;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  margin: auto;
+  animation: spin 2s linear infinite;
 }
 
 .preloader-hidden {
   transition: 1s;
   opacity: 0;
-  transform: scale(10);
+  transform: scale(5);
 }
 
 @media (max-width: 1200px) {

@@ -4,35 +4,35 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: radial-gradient(circle at 50% 0%,$color-secondary, $color-primary, $color-dark 100%);
+    background: radial-gradient(circle at 50% 30%,$color-secondary, $color-primary, $color-dark 100%);
     z-index: 9999;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
   }
   
-  #loader {
-    // border: 16px solid $color-primary;
-    // border-top: 16px solid $color-secondary;
-    // border-radius: 50%;
-    // width: 15rem;
-    // height: 15rem;
-    // position: absolute;
-    // right: 0;
-    // left: 0;
-    // top: 0;
-    // bottom: 0;
-    // margin: auto;
-   // animation: spin 2s linear infinite;
+  #loader-heading {
     opacity: 1;
     transition: 1s opacity;
     color: white;
     font-size: 5rem;
+    width: 100%;
+    text-align: center;
   }
+  #loader{ 
+    border: 16px solid $color-primary;
+    border-top: 16px solid $color-secondary;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    margin: auto;
+   animation: spin 2s linear infinite;}
+
 
 .preloader-hidden{
     transition: 1s;
     opacity: 0;
-    transform: scale(10);
+    transform: scale(5);
 }
 
