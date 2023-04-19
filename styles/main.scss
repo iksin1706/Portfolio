@@ -7,7 +7,7 @@
 @import "layouts/projects.scss";
 @import "layouts/contact.scss"
 ;
-@import "_media-queries.scss";
+
 
 @import "base/base";
 @import "base/typography.scss";
@@ -15,3 +15,5 @@
 
 @import "components/button";
 @import "components/preloader";
+
+@import "base/media-queries.scss";

@@ -4,7 +4,6 @@
     }
 }
 
-
 @media only screen and (max-width: 1000px) {
     #main-layer {
         left: -46%;
@@ -41,10 +40,8 @@
     }
     .contact__container {
         padding-top: 100px;
-        //flex-flow: column;
     }
     .projects__header {
-        //left: 30px;
     }
     .about__description {
     }
@@ -55,11 +52,4 @@
     .about-middle {
         margin-bottom: 50px;
     }
-}
-@media only screen and (max-width: 750px) {
-    .card{
-        // height: 97vmin;
-        // width: 70vmin;
-    }
-    
 }

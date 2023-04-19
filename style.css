@@ -220,6 +220,7 @@
   font-size: 7rem;
   line-height: 1.4;
   color: white;
+  line-height: 7rem;
   opacity: 0.6;
   transform: translateZ(-50px) translateY(-100rem) scale(6);
   text-transform: uppercase;
@@ -563,60 +564,6 @@
   border-bottom: 10px #97361a solid;
 }
 
-@media (max-width: 1200px) {
-  .about {
-    flex-direction: column;
-  }
-}
-@media only screen and (max-width: 1000px) {
-  #main-layer {
-    left: -46%;
-  }
-
-  .about {
-    padding-top: 0px;
-  }
-}
-@media only screen and (max-width: 1600px) {
-  .about__container {
-    flex-flow: column;
-    align-items: center;
-    gap: 0px;
-    padding-top: 0px;
-    padding: 50px;
-  }
-
-  .about__head {
-    margin-bottom: 40rem;
-  }
-
-  .about__description {
-    margin-top: 0px;
-  }
-}
-@media only screen and (max-width: 1650px) {
-  .layer7 {
-    transform: translateY(3vh);
-  }
-}
-@media only screen and (max-width: 600px) {
-  #main-layer {
-    left: -33%;
-  }
-
-  .contact__container {
-    padding-top: 100px;
-  }
-
-  .about__head {
-    transform: scale(0.6) !important;
-    width: 70rem;
-  }
-
-  .about-middle {
-    margin-bottom: 50px;
-  }
-}
 *,
 *::before,
 *::after {
@@ -833,6 +780,61 @@ a {
   transition: 1s;
   opacity: 0;
   transform: scale(10);
+}
+
+@media (max-width: 1200px) {
+  .about {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #main-layer {
+    left: -46%;
+  }
+
+  .about {
+    padding-top: 0px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .about__container {
+    flex-flow: column;
+    align-items: center;
+    gap: 0px;
+    padding-top: 0px;
+    padding: 50px;
+  }
+
+  .about__head {
+    margin-bottom: 40rem;
+  }
+
+  .about__description {
+    margin-top: 0px;
+  }
+}
+@media only screen and (max-width: 1650px) {
+  .layer7 {
+    transform: translateY(3vh);
+  }
+}
+@media only screen and (max-width: 600px) {
+  #main-layer {
+    left: -33%;
+  }
+
+  .contact__container {
+    padding-top: 100px;
+  }
+
+  .about__head {
+    transform: scale(0.6) !important;
+    width: 70rem;
+  }
+
+  .about-middle {
+    margin-bottom: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
