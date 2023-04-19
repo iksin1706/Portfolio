@@ -3,7 +3,6 @@ const navContainer = document.getElementById('nav-container');
 const navButton = document.getElementById('nav-button');
 const words = Array.from(document.getElementsByClassName("head__word"));
 
-console.log(nav.style.width);
 var activeNav = false;
 
 
@@ -36,7 +35,6 @@ const rotate = (a, obj) => {
 
 
   obj.style.transform = `translate(${Math.floor(px - obj.offsetWidth / 2)}px,${Math.floor(py - obj.offsetHeight / 2)}px) scale(${(y + 150) / (py + 150)})`;
-  console.log(`translate(${Math.floor(px - obj.offsetWidth / 2)}px,${Math.floor(py - obj.offsetHeight / 2)}px) scale(${(y + 150) / (py + 150)})`);
   obj.style.zIndex = py > y ? 100 : 200;
 };
 
@@ -100,7 +98,6 @@ function drag(e) {
 
   const mouseDelta = parseFloat(cardsContainer.dataset.mouseDownAt) - clientX;
   maxDelta = cardsContainer.offsetWidth / 3;
-  console.log(maxDelta);
 
   const percentage = (mouseDelta / maxDelta) * 100;
   const nextPercentage = Math.min(Math.max(parseFloat(cardsContainer.dataset.prevPercentage) + percentage, 0), 80);
@@ -153,7 +150,20 @@ let headAnimation2 = KUTE.fromTo(
   { duration: 500, yoyo: true }
 )
 
+document.querySelector('.about').addEventListener('mousemove', eyeball);
 
+function eyeball(event) {
+  const eyes = document.querySelectorAll('.head__eye');
+  eyes.forEach(eye => {
+    const { left, top, width, height } = eye.getBoundingClientRect();
+    const x = left + width / 2;
+    const y = top + height / 2;
+
+    const radian = Math.atan2(event.pageX - x, event.pageY - y);
+    const rotate = radian * (180 / Math.PI) * -1 + 270;
+    eye.style.transform = `rotate(${rotate}deg)`;
+  });
+}
 
 document.querySelector('.hero__header').innerHTML = "";
 
@@ -166,7 +176,6 @@ async function typingAnimation(className, texts, speed) {
 
     leftHandAnimation.start();
     rightHandAnimation.start();
-    console.log("start typing")
     for (const char of text) {
       element.innerHTML += char;
       await new Promise(resolve => setTimeout(resolve, speed));
@@ -183,8 +192,8 @@ async function typingAnimation(className, texts, speed) {
 
   }
 
-
-
+  console.log('teeest')
+  document.querySelector('.hero__header').classList.add('hero__header--big');
   const finalText = texts[texts.length - 1];
   leftHandAnimation.start();
   rightHandAnimation.start();
@@ -285,7 +294,6 @@ let navBackground = document.querySelector('.nav__background');
 let paralax = document.querySelector('.parallax');
 paralax.addEventListener('scroll', () => {
   const currentScrollTop = paralax.scrollTop
-  console.log(window.pageYOffset);
   isScrollingUp = currentScrollTop < lastScrollTop;
 
   lastScrollTop = currentScrollTop;

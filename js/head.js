@@ -25,8 +25,7 @@ const updateAnimation = () => {
 
 updateAnimation();
 
-
-document.addEventListener('mousemove', eyeball);
+document.querySelector('.about').addEventListener('mousemove', eyeball);
 
 function eyeball(event) {
   const eyes = document.querySelectorAll('.head__eye');
