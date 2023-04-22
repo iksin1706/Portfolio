@@ -5,8 +5,8 @@
 @import "layouts/hero.scss";
 @import "layouts/about.scss";
 @import "layouts/projects.scss";
-@import "layouts/contact.scss"
-;
+@import "layouts/contact.scss";
+@import "layouts/footer";
 
 
 @import "base/base";
@@ -15,5 +15,3 @@
 
 @import "components/button";
 @import "components/preloader";
-
-@import "base/media-queries.scss";

@@ -2,9 +2,11 @@ const nav = document.getElementById('nav');
 const navContainer = document.getElementById('nav-container');
 const navButton = document.getElementById('nav-button');
 const words = Array.from(document.getElementsByClassName("head__word"));
+const cardsContainer = document.querySelector(".projects__container");
+const projects = document.querySelector(".projects");
 
 let activeNav = false;
-
+nav.dataset.active = false;
 
 Array.from(document.getElementsByClassName("nav__list__item"))
   .forEach((item, index) => {
@@ -24,6 +26,8 @@ navButton.onclick = () => {
   }
 }
 
+
+//WORDS AROUND HEAD
 const x = 250;
 const y = 150;
 const r = 75;
@@ -52,8 +56,7 @@ const updateAnimation = () => {
 updateAnimation();
 
 
-let cardsContainer = document.querySelector(".projects__container");
-let projects = document.querySelector(".projects");
+//PROJECTS SLIDER
 cardsContainer.dataset.prevPercentage = "0";
 
 
@@ -125,25 +128,25 @@ function drag(e) {
 
 let typingSpeed = 75;
 
-let leftHandAnimation = KUTE.fromTo(
+const leftHandAnimation = KUTE.fromTo(
   '#hand1-1',
   { path: '#hand1-1' },
   { path: '#hand1-2' },
   { duration: typingSpeed, yoyo: true, repeat: 999 }
 )
-let rightHandAnimation = KUTE.fromTo(
+const rightHandAnimation = KUTE.fromTo(
   '#hand2-1',
   { path: '#hand2-1' },
   { path: '#hand2-2' },
   { duration: typingSpeed, yoyo: true, repeat: 999 }
 )
-let headAnimation = KUTE.fromTo(
+const headAnimation = KUTE.fromTo(
   '#head1-1',
   { path: '#head1-1' },
   { path: '#head1-2' },
   { duration: 500, yoyo: true }
 )
-let headAnimation2 = KUTE.fromTo(
+const headAnimation2 = KUTE.fromTo(
   '#head2-1',
   { path: '#head2-1' },
   { path: '#head2-2' },
@@ -287,6 +290,8 @@ targets.forEach((target) => {
   observer.observe(target);
 });
 
+
+//Hide nav
 let lastScrollTop = 0;
 let isScrollingUp = false;
 
@@ -336,8 +341,6 @@ function scrollToElement(section) {
   })
   nav.dataset.active = false;
   activeNav = false;
-
-
 }
 
 function Position(obj) {

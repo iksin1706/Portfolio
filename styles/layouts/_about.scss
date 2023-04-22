@@ -12,11 +12,16 @@
         flex-flow: row-reverse;
         justify-content: center;
         z-index: 300;
-        padding: 10rem;
+        padding: 9rem;
         padding-bottom: 40rem;
-        gap: 10rem;
+        gap: 5rem;
         transform-origin: bottom;
         margin: auto;
+        flex-wrap: wrap;
+        @include respond(phone){
+         padding-left: 1.5rem;
+         padding-right: 1.5rem;   
+        }
     }
     &__header {
         color: white;
@@ -25,6 +30,7 @@
         animation: fade-in 1s forwards;
         animation-delay: 2s;
         opacity: 0;
+        
     }
     &__description {
         font-size: 2rem;
@@ -36,12 +42,19 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 0;
+        max-width: 80rem;
+        margin-top: 7rem;
+
     }
     &__head {
-        padding-left: 5rem;
         min-width: 52.5rem;
         min-height: 40rem;
+        margin-bottom: 5rem;
         transform-origin: bottom;
+
+        @include respond(phone) {
+            transform: scale(0.6) !important;
+        }
     }
 }
 .corners {
@@ -161,5 +174,10 @@
         width: 120px;
         font-weight: 600;
         color: $color-grey;
+    }
+}
+@media only screen and (max-width: 1600px) {
+    .about__description {
+        margin-top: 0px;
     }
 }

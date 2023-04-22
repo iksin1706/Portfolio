@@ -199,6 +199,11 @@
   transform: translateX(50%);
   left: -54%;
 }
+@media (max-width: 37.5em) {
+  #main-layer {
+    left: -33%;
+  }
+}
 
 .hero__layer {
   position: absolute;
@@ -254,11 +259,18 @@
   flex-flow: row-reverse;
   justify-content: center;
   z-index: 300;
-  padding: 10rem;
+  padding: 9rem;
   padding-bottom: 40rem;
-  gap: 10rem;
+  gap: 5rem;
   transform-origin: bottom;
   margin: auto;
+  flex-wrap: wrap;
+}
+@media (max-width: 37.5em) {
+  .about__container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 .about__header {
   color: white;
@@ -278,12 +290,19 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
+  max-width: 80rem;
+  margin-top: 7rem;
 }
 .about__head {
-  padding-left: 5rem;
   min-width: 52.5rem;
   min-height: 40rem;
+  margin-bottom: 5rem;
   transform-origin: bottom;
+}
+@media (max-width: 37.5em) {
+  .about__head {
+    transform: scale(0.6) !important;
+  }
 }
 
 .corners {
@@ -400,6 +419,11 @@
   color: #c7c7c7;
 }
 
+@media only screen and (max-width: 1600px) {
+  .about__description {
+    margin-top: 0px;
+  }
+}
 .projects {
   height: 110vh;
   width: 100vw;
@@ -566,6 +590,13 @@
   background-color: #ae4819;
   border-right: 10px #c04f30 solid;
   border-bottom: 10px #97361a solid;
+}
+
+footer {
+  color: white;
+  position: relative;
+  top: 50vh;
+  text-align: center;
 }
 
 *,
@@ -797,61 +828,6 @@ a {
   transition: 1s;
   opacity: 0;
   transform: scale(5);
-}
-
-@media (max-width: 1200px) {
-  .about {
-    flex-direction: column;
-  }
-}
-@media only screen and (max-width: 1000px) {
-  #main-layer {
-    left: -46%;
-  }
-
-  .about {
-    padding-top: 0px;
-  }
-}
-@media only screen and (max-width: 1600px) {
-  .about__container {
-    flex-flow: column;
-    align-items: center;
-    gap: 0px;
-    padding-top: 0px;
-    padding: 50px;
-  }
-
-  .about__head {
-    margin-bottom: 40rem;
-  }
-
-  .about__description {
-    margin-top: 0px;
-  }
-}
-@media only screen and (max-width: 1650px) {
-  .layer7 {
-    transform: translateY(3vh);
-  }
-}
-@media only screen and (max-width: 600px) {
-  #main-layer {
-    left: -33%;
-  }
-
-  .contact__container {
-    padding-top: 100px;
-  }
-
-  .about__head {
-    transform: scale(0.6) !important;
-    width: 70rem;
-  }
-
-  .about-middle {
-    margin-bottom: 50px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
