@@ -48,9 +48,9 @@ const distance = wordWidth / (2 * Math.PI * r);
 const updateAnimation = () => {
   a = (a + distance / 10) % (2 * Math.PI);
   for (let i = 0; i < words.length; i++) {
-    rotate(i * 2 * Math.PI / words.length - a, words[i]);
+    rotate((i * 2 * Math.PI / words.length - a)*5, words[i]);
   }
-  requestAnimationFrame(updateAnimation);
+  setTimeout(updateAnimation,100);
 };
 
 updateAnimation();
