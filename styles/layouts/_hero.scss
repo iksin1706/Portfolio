@@ -25,7 +25,7 @@ $animation-delay: 0;
 }
 #layer5 {
     transform: translateZ(-10px) scale(2) scaleY(1.1);
-    animation: 1s popfromUp forwards ease-out;
+    animation: 10s wind-trees forwards ease-in-out infinite;
     animation-delay: 400ms;
 }
 
