@@ -62,6 +62,7 @@ cardsContainer.dataset.prevPercentage = "0";
 
 Array.from(cardsContainer.getElementsByClassName("card__image"))
   .forEach((item, index) => {
+    if(index!=5)
     item.style.backgroundImage = `url(img/project${index}.png)`;
   }
   )
