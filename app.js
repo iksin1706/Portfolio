@@ -14,7 +14,7 @@ Array.from(document.getElementsByClassName("nav__list__item"))
       nav.dataset.activeIndex = index;
     }
   }
- )
+  )
 
 navButton.onclick = () => {
   if (!activeNav) {
@@ -48,9 +48,9 @@ const distance = wordWidth / (2 * Math.PI * r);
 const updateAnimation = () => {
   a = (a + distance / 10) % (2 * Math.PI);
   for (let i = 0; i < words.length; i++) {
-    rotate((i * 2 * Math.PI / words.length - a)*5, words[i]);
+    rotate((i * 2 * Math.PI / words.length - a) * 5, words[i]);
   }
-  setTimeout(updateAnimation,100);
+  setTimeout(updateAnimation, 100);
 };
 
 updateAnimation();
@@ -62,7 +62,8 @@ cardsContainer.dataset.prevPercentage = "0";
 
 Array.from(cardsContainer.getElementsByClassName("card__image"))
   .forEach((item, index) => {
-    item.style.backgroundImage = `url(img/project${index}.png)`;
+    if (index != 5)
+      item.style.backgroundImage = `url(img/project${index}.png)`;
   }
   )
 
@@ -224,54 +225,51 @@ async function animations() {
   typingAnimation(".hero__header", ["Hi I'm Łukasz Jasiński", "And this is my", "Portfolio"], typingSpeed);
 }
 
-window.addEventListener("load",async ()=>{
+window.addEventListener("load", async () => {
   const preloader = document.getElementById("preloader");
-  document.getElementById("loader").style.visibility='hidden';
+  document.getElementById("loader").style.visibility = 'hidden';
   animations();
   preloader.classList.add("preloader-hidden");
-  await new Promise(resolve => setTimeout(resolve, 1000)).then(()=>{preloader.style.display='none'});
-  
+  await new Promise(resolve => setTimeout(resolve, 1000)).then(() => { preloader.style.display = 'none' });
+
 });
 
 
-if (window.innerWidth > 800) {
-  //FIRECAMP ANIMATION
 
-  for (let i = 1; i <= 3; i++) {
-    let tween = KUTE.fromTo(
-      '#fire' + i + '-1',
-      { path: '#fire' + i + '-1' },
-      { path: '#fire' + i + '-3' },
-      { duration: i == 3 ? 1000 : 100, yoyo: true, }
-    )
-
-    let tween2 = KUTE.fromTo(
-      '#fire' + i + '-1',
-      { path: '#fire' + i + '-3' },
-      { path: '#fire' + i + '-2' },
-      { duration: i == 3 ? 1000 : 100, }
-    )
-
-    let tween3 = KUTE.fromTo(
-      '#fire' + i + '-1',
-      { path: '#fire' + i + '-2' },
-      { path: '#fire' + i + '-1' },
-      { duration: i == 3 ? 1000 : 100, }
-    )
-    tween.chain(tween2);
-    tween2.chain(tween3);
-    tween3.chain(tween);
-
-    tween.start();
-  }
-  let tweenLight = KUTE.fromTo(
-    '#fire4-1',
-    { opacity: 0.75 },
-    { opacity: 1 },
-    { duration: 150, yoyo: true, repeat: 9999 }
+for (let i = 1; i <= 3; i++) {
+  let tween = KUTE.fromTo(
+    '#fire' + i + '-1',
+    { path: '#fire' + i + '-1' },
+    { path: '#fire' + i + '-3' },
+    { duration: i == 3 ? 1000 : 100, yoyo: true, }
   )
-  tweenLight.start();
+
+  let tween2 = KUTE.fromTo(
+    '#fire' + i + '-1',
+    { path: '#fire' + i + '-3' },
+    { path: '#fire' + i + '-2' },
+    { duration: i == 3 ? 1000 : 100, }
+  )
+
+  let tween3 = KUTE.fromTo(
+    '#fire' + i + '-1',
+    { path: '#fire' + i + '-2' },
+    { path: '#fire' + i + '-1' },
+    { duration: i == 3 ? 1000 : 100, }
+  )
+  tween.chain(tween2);
+  tween2.chain(tween3);
+  tween3.chain(tween);
+
+  tween.start();
 }
+let tweenLight = KUTE.fromTo(
+  '#fire4-1',
+  { opacity: 0.75 },
+  { opacity: 1 },
+  { duration: 150, yoyo: true, repeat: 9999 }
+)
+tweenLight.start();
 
 const targets = document.querySelectorAll('.trigger');
 

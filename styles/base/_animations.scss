@@ -94,3 +94,15 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+  @keyframes wind-trees {
+    0% {
+        transform: translateZ(-10px) scale(2) scaleY(1.1) skewX(-5deg) translateX(50px);
+    }
+    50% {
+        transform: translateZ(-10px) scale(2) scaleY(1.1) skewX(5deg) translateX(-50px);
+    }
+    100% {
+        transform: translateZ(-10px) scale(2) scaleY(1.1) skewX(-5deg) translateX(50px);
+    }
+  }

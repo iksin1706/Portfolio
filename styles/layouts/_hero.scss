@@ -12,21 +12,33 @@ $animation-delay: 0;
     transform: translateZ(-40px) scale(5);
     left: -15%;
     animation-delay: 00ms;
+    @include respond(phone){
+        transform: translateZ(-40px) scale(5) translateY(160px);
+    }
 }
 #layer3 {
     transform: translateZ(-30px) scale(4);
     animation: 1s popfromUp forwards ease-out;
     animation-delay: 0ms;
+    @include respond(phone){
+        transform: translateZ(-30px) scale(4) translateY(160px);
+    }
 }
 #layer4 {
     transform: translateZ(-20px) scale(3);
     animation: 1s popfromUp forwards ease-out;
     animation-delay: 200ms;
+    @include respond(phone){
+        transform: translateZ(-20px) scale(3) translateY(160px);
+    }
 }
 #layer5 {
     transform: translateZ(-10px) scale(2) scaleY(1.1);
-    animation: 1s popfromUp forwards ease-out;
+    animation: 10s wind-trees forwards ease-in-out infinite;
     animation-delay: 400ms;
+    @include respond(phone){
+        transform: translateZ(-10px) scale(2) scaleY(1.1) translateY(160px);
+    }
 }
 
 #layer6 {
@@ -53,7 +65,9 @@ $animation-delay: 0;
     transform: translateX(50%);
     left: -54%;
     @include respond(phone){
-        left: -33%;
+        left: 0;
+        transform: scale(0.5);
+        transform-origin: bottom;
     }
 }
 .hero {
