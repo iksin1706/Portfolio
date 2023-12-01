@@ -50,7 +50,7 @@ const updateAnimation = () => {
   for (let i = 0; i < words.length; i++) {
     rotate((i * 2 * Math.PI / words.length - a) * 5, words[i]);
   }
-  setTimeout(updateAnimation, 100);
+  setTimeout(updateAnimation, 200);
 };
 
 updateAnimation();
@@ -227,7 +227,6 @@ async function animations() {
 
 window.addEventListener("load", async () => {
   const preloader = document.getElementById("preloader");
-  document.getElementById("loader").style.visibility = 'hidden';
   animations();
   preloader.classList.add("preloader-hidden");
   await new Promise(resolve => setTimeout(resolve, 1000)).then(() => { preloader.style.display = 'none' });
