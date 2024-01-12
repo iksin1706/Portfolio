@@ -38,6 +38,7 @@ $animation-delay: 0;
     animation-delay: 400ms;
     @include respond(phone){
         transform: translateZ(-10px) scale(2) scaleY(1.1) translateY(160px);
+        display: none;
     }
 }
 
@@ -66,7 +67,7 @@ $animation-delay: 0;
     left: -54%;
     @include respond(phone){
         left: 0;
-        transform: scale(0.5);
+        transform: scale(0.6);
         transform-origin: bottom;
     }
 }
@@ -82,7 +83,7 @@ $animation-delay: 0;
         perspective: 10px;
     }
     &__header{
-        font-weight: bold;
+        font-weight: 300;
         position: absolute;
         text-align: center;
         height: 20vh;

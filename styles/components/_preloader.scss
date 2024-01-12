@@ -4,7 +4,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: radial-gradient(circle at 50% 30%,$color-secondary, $color-primary, $color-dark 100%);
+    background: radial-gradient(circle at 50% 45%,$color-secondary, $color-primary, $color-dark 100%);
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@
     transition: 1s opacity;
     color: white;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 100;
     transform: translateY(100px);
     width: 100%;
     text-align: center;
