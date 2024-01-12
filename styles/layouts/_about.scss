@@ -4,7 +4,6 @@
     z-index: 1;
     min-height: 100vh;
     top: 99.9vh;
-    padding-bottom: 20rem;
 
     background-color: #060303;
 
@@ -205,28 +204,7 @@
     }
 }
 
-@keyframes flow {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(5rem);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-@keyframes flow2 {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5rem);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
+
 
 @media only screen and (max-width: 1600px) {
     .about__description {
@@ -241,28 +219,7 @@ body {
     overflow: hidden;
 }
 
-@keyframes rotate {
-    from {
-        rotate: 0deg;
-    }
 
-    to {
-        rotate: 360deg;
-    }
-}
-@keyframes flick {
-    from {
-        scale: 1 1;
-    }
-
-    50% {
-        scale: 1.2 1.2;
-    }
-
-    to {
-        scale: 1 1;
-    }
-}
 
 #blob {
     background-color: white;
@@ -285,149 +242,8 @@ body {
     position: absolute;
     z-index: -1;
     backdrop-filter: blur(10vmax);
-    background:linear-gradient(to bottom,#000,#00000000 10%,#00000000 90% ,#000);
+    background:linear-gradient(to bottom,#060303,#00000000 10%,#00000000 90% ,#060303);
     mask-image: linear-gradient(to bottom, black 25%, transparent 75%);
-}
-:root {
-    --swiper-pagination-color: orange;
-    --swiper-pagination-bullet-size: 8px;
-    --swiper-pagination-bullet-width: 8px;
-    --swiper-pagination-bullet-active-width: 30px;
-    --swiper-pagination-bullet-height: 8px;
-    --swiper-pagination-bullet-inactive-color: rgb(104, 104, 104);
-    --swiper-pagination-bullet-inactive-opacity: 0.7;
-    --swiper-pagination-bullet-opacity: 1;
-    --swiper-pagination-bullet-horizontal-gap: 4px;
-    --swiper-pagination-bullet-vertical-gap: 6px;
+    
 }
 
-$color-bg: #111;
-$color-particle: rgba(255, 94, 0, 0.644);
-$spacing: 8000px;
-$time-1: 60s;
-$time-2: 120s;
-$time-3: 180s;
-$time-4: 600s;
-
-/* Pauls awesome mixin */
-@function particles($max) {
-    $val: 0px 0px $color-particle;
-    @for $i from 1 through $max {
-        $val: #{$val}, random($spacing) + px random($spacing) + px $color-particle;
-    }
-    @return $val;
-}
-
-@mixin particles($max) {
-    box-shadow: particles($max);
-}
-
-/* Styles */
-html,
-body {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    overflow: hidden;
-}
-
-.page-bg,
-.animation-wrapper {
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.particle,
-.particle:after {
-    background: transparent;
-}
-
-.particle:after {
-    position: absolute;
-    content: "";
-    top: $spacing;
-}
-
-.particle-1 {
-    animation: animParticle $time-1 linear infinite;
-    @include particles(1200);
-    height: 1px;
-    width: 1px;
-}
-
-.particle-1:after {
-    @include particles(1200);
-    height: 1px;
-    width: 1px;
-    animation-delay: -10s;
-}
-
-.particle-2 {
-    animation: animParticle $time-2 linear infinite;
-    @include particles(1200);
-    height: 2px;
-    width: 2px;
-    animation-delay: -10s;
-}
-
-.particle-2:after {
-    @include particles(1200);
-    height: 2px;
-    width: 2px;
-    animation-delay: -10s;
-}
-
-.particle-3 {
-    animation: animParticle $time-3 linear infinite;
-    @include particles(1200);
-    height: 3px;
-    width: 3px;
-    animation-delay: -10s;
-}
-
-.particle-3:after {
-    @include particles(1200);
-    height: 3px;
-    width: 3px;
-    animation-delay: -10s;
-}
-
-.particle-4 {
-    animation: animParticle $time-4 linear infinite;
-    @include particles(400);
-    height: 1px;
-    width: 1px;
-    animation-delay: -10s;
-}
-
-.particle-4:after {
-    @include particles(400);
-    height: 1px;
-    width: 1px;
-    animation-delay: -10s;
-}
-
-@keyframes animParticle {
-    from {
-        transform: translateY(-3000px);
-    }
-    to {
-        transform: translateY($spacing * -1);
-    }
-}
-
-.page-wrapper {
-    text-align: center;
-    color: #fff;
-    z-index: 2;
-}

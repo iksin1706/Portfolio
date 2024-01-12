@@ -160,3 +160,21 @@ body {
 .pr-1 {
   padding-right: 2rem;
 }
+
+.mobile-full{
+  @include respond(phone) {
+    width: 100%;
+  }
+}
+:root {
+  --swiper-pagination-color: orange;
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-active-width: 30px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-inactive-color: rgb(104, 104, 104);
+  --swiper-pagination-bullet-inactive-opacity: 0.7;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+}

@@ -59,14 +59,6 @@ updateAnimation();
 //PROJECTS SLIDER
 cardsContainer.dataset.prevPercentage = "0";
 
-
-Array.from(cardsContainer.getElementsByClassName("card__image"))
-  .forEach((item, index) => {
-    if (index != 5)
-      item.style.backgroundImage = `url(img/project${index}.png)`;
-  }
-  )
-
 projects.addEventListener("mousedown", startDrag);
 projects.addEventListener("mouseup", stopDrag);
 projects.addEventListener("mousemove", drag);
@@ -405,8 +397,8 @@ document.querySelector('.about').addEventListener('mousemove', (event) => {
 });
 
 
-var xMousePos = 0;
-var yMousePos = 0;
+var xMousePos = 880;
+var yMousePos = 800;
 
 document.querySelector('.parallax').addEventListener('scroll', function(event) {
   const { clientX, clientY } = event;
