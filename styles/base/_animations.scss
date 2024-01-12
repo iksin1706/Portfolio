@@ -106,3 +106,38 @@
         transform: translateZ(-10px) scale(2) scaleY(1.1) skewX(-5deg) translateX(50px);
     }
   }
+
+  @keyframes flow {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+@keyframes flick {
+    from {
+        scale: 1 1;
+    }
+
+    50% {
+        scale: 1.2 1.2;
+    }
+
+    to {
+        scale: 1 1;
+    }
+}

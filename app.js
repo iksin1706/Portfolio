@@ -59,21 +59,13 @@ updateAnimation();
 //PROJECTS SLIDER
 cardsContainer.dataset.prevPercentage = "0";
 
-
-Array.from(cardsContainer.getElementsByClassName("card__image"))
-  .forEach((item, index) => {
-    if (index != 5)
-      item.style.backgroundImage = `url(img/project${index}.png)`;
-  }
-  )
-
 projects.addEventListener("mousedown", startDrag);
 projects.addEventListener("mouseup", stopDrag);
 projects.addEventListener("mousemove", drag);
 
-projects.addEventListener("touchstart", startDrag);
+projects.addEventListener("touchstart", startDrag,{passive: true});
 projects.addEventListener("touchend", stopDrag);
-projects.addEventListener("touchmove", drag);
+projects.addEventListener("touchmove", drag ,{passive: true});
 
 function startDrag(e) {
   if (e.type === "mousedown") {
@@ -354,3 +346,73 @@ function copyToClipboard(what, text) {
   navigator.clipboard.writeText(text);
   alert(text + " copied to clipboard");
 }
+var swiper = new Swiper(".swiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  coverflowEffect: {
+    rotate: 10,
+    stretch: 10,
+    depth: 100,
+    modifier: 3,
+    slideShadows: true
+  },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2
+    },
+    1024: {
+      slidesPerView: 2
+    },
+    1560: {
+      slidesPerView: 2
+    }
+  }
+});
+
+const blob = document.getElementById("blob");
+
+document.querySelector('.about').addEventListener('mousemove', (event) => { 
+  const { clientX, clientY } = event;
+  xMousePos = clientX;
+  yMousePos = clientY;
+  console.log("teeeest");
+  const scrollY = document.querySelector('.parallax').scrollTop 
+  let y = yMousePos + scrollY - window.screen.availHeight
+  y = y < 100 ? 100 : y;
+    blob.animate({
+    
+    left: `${clientX}px`,
+    top: `${y}px`
+  }, { duration: 1000, fill: "forwards" });
+
+});
+
+
+var xMousePos = 880;
+var yMousePos = 800;
+
+document.querySelector('.parallax').addEventListener('scroll', function(event) {
+  const { clientX, clientY } = event;
+  console.log("teeeest");
+  const scrollY = document.querySelector('.parallax').scrollTop 
+
+  let y = yMousePos + scrollY - window.screen.availHeight
+  y = y < 100 ? 100 : y;
+
+    blob.animate({
+    
+    left: `${xMousePos}px`,
+    top: `${y}px`
+  }, { duration: 1000, fill: "forwards" });
+});
+
+

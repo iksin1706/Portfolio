@@ -9,14 +9,21 @@
 
     <title>Łukasz Jasiński Portfolio</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.3/dist/kute.min.js" async></script>
-    <script src="https://kit.fontawesome.com/6a5cb115d0.js" crossorigin="anonymous" async></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Pacifico&family=Parisienne&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.3/dist/kute.min.js"></script>
+    <script src="https://kit.fontawesome.com/6a5cb115d0.js" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
         integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico?">
     <link rel="stylesheet" href="style.css">
@@ -24,17 +31,18 @@
 </head>
 
 <body>
+
     <div id="preloader">
         <div class="fire">
             <div class="fire-center">
-              <div class="main-fire"></div>
-              <div class="particle-fire"></div>
+                <div class="main-fire"></div>
+                <div class="particle-fire"></div>
             </div>
-          
+
             <div class="fire-bottom">
-              <div class="main-fire"></div>
+                <div class="main-fire"></div>
             </div>
-          </div>
+        </div>
         <h2 id="loader-heading">Loading</h2>
     </div>
 
@@ -355,8 +363,10 @@
             <img id="layer2" class="hero__layer" src="img/layers/layer5.webp" alt="paralx layer 2">
             <img id="layer1" class="hero__layer" src="img/layers/layer6.svg" alt="paralax layer 1">
             <section class="about trigger">
+                <div style="position: relative;overflow:hidden;padding-bottom: 20rem;">
+                <div id="blob"></div>
+                <div id="blur"></div>
                 <div class="about__container">
-                    </h2>
                     <p class="about__description corners">As a 21-year-old IT student and developer, I have a strong
                         foundation in computer science and a passion for creating innovative software solutions.
                         Throughout my studies, I have gained experience in a variety of programming languages, including
@@ -369,14 +379,16 @@
 
                     <div class="about__head">
                         <div class="head">
-                            <div class="head__word">C#</div>
-                            <div class="head__word">.NET</div>
-                            <div class="head__word">UNITY</div>
-                            <div class="head__word">SCSS</div>
-                            <div class="head__word">JS/TS</div>
-                            <div class="head__word">Angular</div>
-                            <div class="head__word">SQL</div>
-                            <div class="head__word">JAVA</div>
+                            <div class="words">
+                                <div class="head__word">C#</div>
+                                <div class="head__word">.NET</div>
+                                <div class="head__word">UNITY</div>
+                                <div class="head__word">SCSS</div>
+                                <div class="head__word">JS/TS</div>
+                                <div class="head__word">Angular</div>
+                                <div class="head__word">SQL</div>
+                                <div class="head__word">JAVA</div>
+                            </div>
                             <div class="head__eyes">
                                 <div class="head__eye">
                                     <div class="head__eye__middle"></div>
@@ -391,64 +403,183 @@
                     </div>
 
                 </div>
-                <h2 class="projects__header trigger"><span class="text--orange">My </span><span
+
+                <div class="row test row--mobile-reverse">
+                    <div class="col-1-of-2">
+                        <div class="swiper">
+                            <h2 class="heading-2 mb-3">Websites</h2>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper-slide--1 ">
+                                    <div class="card mobile-full" draggable="false" unselectable="on">
+                                        <div class="card__image card__image--center" style="background-image:url(img/project0.png)"></div>
+                                        <div class="card__container">
+                                            <h3 class="card__header">Portfolio</h3>
+                                            <div class="card__technologies">
+                                                HTML SCSS JS
+                                            </div>
+                                            <p class="card__description">
+                                                This website
+                                            </p>
+                                            <div class="row-flex">
+                                                <a href="https://github.com/iksin1706/Portfolio" target="_blank"
+                                                    class="btn projects__button"><i class="fa-brands fa-github"></i>
+                                                    Learn more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide--2  ">
+                                    <div class="card mobile-full" draggable="false" unselectable="on">
+                                        <div class="card__image card__image--center" src="" alt="" srcset=""
+                                            style="background-image:url(img/diagonal.png)"></div>
+                                        <div class="card__container">
+                                            <h3 class="card__header">PMJ</h3>
+                                            <div class="card__technologies">
+                                                Laravel Scss Js Vite
+                                            </div>
+                                            <p class="card__description">
+                                                A website for company that manufacture rim renovation machines<br>
+                                            </p>
+                                            <div class="row-flex">
+                                                <a class="btn" target="_blank"><i class="fa-brands fa-github"></i> Learn
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide swiper-slide--3">
+                                    <div class="card  mobile-full" draggable="false" unselectable="on">
+                                        <div class="card__image card__image--center" style="background-image:url(img/diagonal2.png)"></div>
+                                        <div class="card__container">
+                                            <h3 class="card__header">AC DC</h3>
+                                            <div class="card__technologies">
+                                                JS Tailwind PHP
+                                            </div>
+                                            <p class="card__description">
+                                                A website made for electrician 
+                                            </p>
+                                            <div class="row-flex">
+                                                <a href="https://github.com/iksin1706/DatingApp" target="_blank"
+                                                    class="btn"><i class="fa-brands fa-github"></i> Learn more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide--3  ">
+                                    <div class="card mobile-full" draggable="false" unselectable="on">
+                                        <div class="card__image" style="background-image:url(img/diagonal3.png)"></div>
+                                        <div class="card__container">
+                                            <h3 class="card__header">Dating App</h3>
+                                            <div class="card__technologies">
+                                                Angular .NET/Laravel
+                                            </div>
+                                            <p class="card__description">
+                                                Dating website with at first .Net backend then rewriten to laravel due to collage project requiremens 
+                                            </p>
+                                            <div class="row-flex">
+                                                <a href="https://github.com/iksin1706/DatingApp" target="_blank"
+                                                    class="btn"><i class="fa-brands fa-github"></i> Learn more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-2 perspective-image perspective-image--right">
+                        <img src="img/website.png" alt="">
+                    </div>
+                </div>
+                <div class="row test">
+                    <div class="col-1-of-2 perspective-image perspective-image--left">
+                        <img src="img/game.png" alt="">
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="swiper">
+                            <h2 class="heading-2 mb-3 text--right">Games</h2>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper-slide--1">
+                                    <div class="card mobile-full" draggable="false" unselectable="on">
+                                        <div class="card__image card__image--center" style="background-image:url(img/mobile-game.JPG)"></div>
+                                        <div class="card__container">
+                                            <h3 class="card__header">Space Valley</h3>
+                                            <div class="card__technologies">
+                                                Unity Blender C#
+                                            </div>
+                                            <p class="card__description">
+                                                A 3D mobile game.
+                                            </p>
+                                            <div class="row-flex">
+                                                <a href="https://github.com/iksin1706/Portfolio" target="_blank"
+                                                    class="btn projects__button"><i class="fa-brands fa-github"></i>
+                                                    Learn more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide--2">
+                                    <div class="card mobile-full" draggable="false" unselectable="on">
+                                        <div class="card__image card__image--center" src="" alt="" srcset=""
+                                            style="background-image:url(img/project1.png)"></div>
+                                        <div class="card__container">
+                                            <h3 class="card__header">Messiah</h3>
+                                            <div class="card__technologies">
+                                                C# Unity Blender
+                                            </div>
+                                            <p class="card__description">
+                                                3D Low-poly game about Jesus. <br>
+                                                II place in nationwide "GEEK" competition in game implementation
+                                                category
+                                            </p>
+                                            <div class="row-flex">
+                                                <a class="btn" target="_blank"><i class="fa-brands fa-github"></i> Learn
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide swiper-slide--3">
+                                    <div class="card mobile-full" draggable="false" unselectable="on">
+                                        <div class="card__image card__image--center" style="background-image:url(img/tac-tac-toe.JPG)"></div>
+                                        <div class="card__container">
+                                            <h3 class="card__header">Tac Tac Toe</h3>
+                                            <div class="card__technologies">
+                                                HTML TS SCSS
+                                            </div>
+                                            <p class="card__description">
+                                                4x4 tic-tac-toe like game with alfa-beta prenouning AI. Losing is first one with 4 'X' in row
+                                            </p>
+                                            <div class="row-flex">
+                                                <a href="https://github.com/iksin1706/DatingApp" target="_blank"
+                                                    class="btn"><i class="fa-brands fa-github"></i> Learn more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <h2 class="projects__header trigger"><span class="text--orange">Other </span><span
                         class="text--white">Projects</span></h1>
                     <img class="wave wave--top" src="img/wave.svg" alt="" srcset="">
-
+            
             </section>
             <section id="projects" class="projects trigger">
                 <div class="projects__container">
-                    <div class="card" draggable="false" unselectable="on">
-                        <div class="card__image" src="" alt="" srcset=""></div>
-                        <div class="card__container">
-                            <h3 class="card__header">Portfolio</h3>
-                            <div class="card__technologies">
-                                HTML SCSS JS
-                            </div>
-                            <p class="card__description">
-                                This website
-                            </p>
-                            <div class="row-flex">
-                                <a href="https://github.com/iksin1706/Portfolio" target="_blank"
-                                    class="btn projects__button"><i class="fa-brands fa-github"></i> Learn more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" draggable="false" unselectable="on">
-                        <div class="card__image" src="" alt="" srcset=""></div>
-                        <div class="card__container">
-                            <h3 class="card__header">Messiah</h3>
-                            <div class="card__technologies">
-                                C# Unity Blender
-                            </div>
-                            <p class="card__description">
-                                3D Low-poly game about Jesus. <br>
-                                II place in nationwide "GEEK" competition in game implementation category
-                            </p>
-                            <div class="row-flex">
-                                <a class="btn" target="_blank"><i class="fa-brands fa-github"></i> Learn more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" draggable="false" unselectable="on">
-                        <div class="card__image" src="" alt="" srcset=""></div>
-                        <div class="card__container">
-                            <h3 class="card__header">Dating App</h3>
-                            <div class="card__technologies">
-                                Angular .NET
-                            </div>
-                            <p class="card__description">
-                                Dating website made during fullstack course on udemy
-                            </p>
-                            <div class="row-flex">
-                                <a href="https://github.com/iksin1706/DatingApp" target="_blank" class="btn"><i
-                                        class="fa-brands fa-github"></i> Learn more</a>
-                            </div>
-                        </div>
-                    </div>
+
 
                     <div class="card" draggable="false" unselectable="on">
-                        <div class="card__image" src="" alt="" srcset=""></div>
+                        <div class="card__image" src="" alt="" srcset="" style="background-image:url(img/project3.png)"></div>
                         <div class="card__container">
                             <h3 class="card__header">QuickBill</h3>
                             <div class="card__technologies">
@@ -464,11 +595,11 @@
                         </div>
                     </div>
                     <div class="card" draggable="false" unselectable="on">
-                        <div class="card__image" src="" alt="" srcset=""></div>
+                        <div class="card__image" src="" alt="" srcset="" style="background-image:url(img/project4.png)"></div>
                         <div class="card__container">
                             <h3 class="card__header">Catechetical app</h3>
                             <div class="card__technologies">
-                                .NETCORE EF WPF
+                                .NETCORE EF WPF BIBLEAPI
                             </div>
                             <p class="card__description">
                                 Desktop app which allows to read bible, prays and more. <br>
@@ -481,23 +612,45 @@
                         </div>
                     </div>
                     <div class="card" draggable="false" unselectable="on">
-                        <div class="card__image" src="" alt="" srcset=""></div>
+                        <div class="card__image" src="" alt="" srcset="" style="background-image:url(img/OSP.jpg)"></div>
                         <div class="card__container">
-                            <h3 class="card__header">Other projects</h3>
+                            <h3 class="card__header">Firefighter system</h3>
                             <div class="card__technologies">
-                                
+                                LOGO! WEINTEK HMI Jquery
                             </div>
-                            <div class="card__description">
-                                <ul>
-                                    <li>LOGO! & Weintek HMI control systems</li>
-                                    <li>4x4 tic-tac-toe with minimax in TS</li>
-                                    <li>Sorting algorithms visualization</li>
-                                    <li>Few landing pages</li>
-                                    <li>Simple blog in PHP and bootstrap</li>
-                                    <li>3D renders in Blender</li>
-                                </ul>
-                                and more...
+                            <p class="card__description">
+                                A control system for fire brigade's building that provides automation, and easy remote control to gates,lights etc
+                            </p>
+                            <div class="row-flex">
+                                <a class="btn" target="_blank"><i class="fa-brands fa-github"></i> Learn more</a>
                             </div>
+                        </div>
+                    </div>
+                    <div class="card" draggable="false" unselectable="on">
+                        <div class="card__image" src="" alt="" srcset="" style="background-image:url(img/blog.jpg)"></div>
+                        <div class="card__container">
+                            <h3 class="card__header">Game Dev Blog</h3>
+                            <div class="card__technologies">
+                                PHP Bootstrap 
+                            </div>
+                            <p class="card__description">
+                                A blog with articles comments and admin panel
+                            </p>
+                            <div class="row-flex">
+                                <a class="btn" target="_blank"><i class="fa-brands fa-github"></i> Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" draggable="false" unselectable="on">
+                        <div class="card__image" src="" alt="" srcset="" style="background-image:url(img/rb11.JPG)"></div>
+                        <div class="card__container">
+                            <h3 class="card__header">Rim Blaster</h3>
+                            <div class="card__technologies">
+                                LOGO! WEINTEK HMI
+                            </div>
+                            <p class="card__description">
+                               A control system for machine that cleans rims from rust.
+                            </p>
                             <div class="row-flex">
                                 <a class="btn" target="_blank"><i class="fa-brands fa-github"></i> Learn more</a>
                             </div>
@@ -523,13 +676,19 @@
                 </ul>
 
             </section>
+
             <footer>&copy; Copyright 2023, Łukasz Jasiński </footer>
         </div>
-        
+        <div class="animation-wrapper">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+          </div>
     </main>
 
 
- 
+
 </body>
 
 </html>

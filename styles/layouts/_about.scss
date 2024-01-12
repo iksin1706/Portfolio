@@ -1,26 +1,27 @@
 .about {
     width: 100vw;
     position: relative;
-    padding-top: 10rem;
     z-index: 1;
     min-height: 100vh;
     top: 99.9vh;
+
     background-color: #060303;
 
     &__container {
+        overflow: hidden;
         display: flex;
         flex-flow: row-reverse;
         justify-content: center;
         z-index: 300;
         padding: 9rem;
-        padding-bottom: 40rem;
         gap: 5rem;
+        padding-bottom: 20rem;
         transform-origin: bottom;
         margin: auto;
         flex-wrap: wrap;
-        @include respond(phone){
-         padding-left: 1.5rem;
-         padding-right: 1.5rem;   
+        @include respond(phone) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
         }
     }
     &__header {
@@ -30,7 +31,6 @@
         animation: fade-in 1s forwards;
         animation-delay: 2s;
         opacity: 0;
-        
     }
     &__description {
         font-size: 2rem;
@@ -44,13 +44,13 @@
         opacity: 0;
         max-width: 80rem;
         margin-top: 7rem;
-
     }
     &__head {
         min-width: 52.5rem;
         min-height: 40rem;
         margin-bottom: 5rem;
         transform-origin: bottom;
+        animation: flow 2s ease-in-out infinite;
 
         @include respond(phone) {
             transform: scale(0.6) !important;
@@ -106,6 +106,7 @@
     position: relative;
     opacity: 0;
     transform-origin: center;
+
     &::after {
         display: block;
         content: "";
@@ -113,10 +114,13 @@
         position: absolute;
         height: 450px;
         border-radius: 50%;
-        background: radial-gradient(at 0% 0%, $color-secondary, $color-primary, $color-dark 100%);
+       // background: linear-gradient($color-secondary, $color-primary);
         top: 150px;
         left: 0px;
         z-index: -1;
+        filter: blur(20px);
+        opacity: 0.5;
+        animation: flow2 2s ease-in-out infinite;
     }
     &__image {
         position: absolute;
@@ -177,8 +181,69 @@
         transition: 1000ms linear;
     }
 }
+
+.perspective-image {
+    display: flex;
+
+    &--right {
+        justify-content: right;
+    }
+    &--left {
+        justify-content: left;
+    }
+    & img {
+        filter: drop-shadow(0px 40px 25px $color-primary);
+        width: 75%;
+
+        object-fit: contain;
+        transition: 0.5s;
+        &:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0px 60px 80px $color-primary);
+        }
+    }
+}
+
+
+
 @media only screen and (max-width: 1600px) {
     .about__description {
         margin-top: 0px;
     }
 }
+
+body {
+    background-color: black;
+    height: 100vh;
+    margin: 0rem;
+    overflow: hidden;
+}
+
+
+
+#blob {
+    background-color: white;
+    height: 25vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, $color-primary, $color-secondary);
+    animation: rotate 20s infinite;
+    opacity: 0.8;
+    z-index: -2;
+}
+
+#blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    backdrop-filter: blur(10vmax);
+    background:linear-gradient(to bottom,#060303,#00000000 10%,#00000000 90% ,#060303);
+    mask-image: linear-gradient(to bottom, black 25%, transparent 75%);
+    
+}
+

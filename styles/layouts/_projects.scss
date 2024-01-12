@@ -78,6 +78,9 @@
         background-position: 0% center;
         background-size: cover;
         filter: drop-shadow(2);
+        &--center{
+            background-position: center;
+        }
     }
     &__description {
         margin: 2rem;
